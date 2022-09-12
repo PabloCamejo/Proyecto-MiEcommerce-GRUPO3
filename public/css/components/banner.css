@@ -1,0 +1,147 @@
+
+
+main{
+    display: flex;
+}
+
+
+
+.banner-top-container{
+    margin-top: 30px;
+    /* position: absolute; */
+    /* width: 414px; */
+    width: 100vw;
+    min-width: 260px;
+    /* max-width: 400px; */
+
+    height: 270px;
+}
+
+.banner-top{
+    margin: auto;
+    margin-top: 10px;
+    /* margin-left: 25%; */
+    /* width: 92%; */
+    /* min-width: 360px;*/
+    max-width: 368px; 
+    padding-left: 24px;
+    padding-top: 16px;
+    height: 283px;
+    background-color: var(--dark-gray);
+    border-radius: 4px;
+    margin-bottom: 27px;
+
+    width: 92vw;
+    /* min-width: 360px;
+    max-width: 400px; */
+
+    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.295));
+}
+
+.banner-top ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+
+}
+.banner-top ul li{
+    color: var(--white);
+    display: flex;
+    align-items: flex-center;
+    align-content: center;
+    gap: 10px;
+}
+
+.banner__icons{
+    fill:  white;
+    width: 18px;
+}
+
+
+
+
+.banner-bot{
+    margin-top: 100px;
+    background-color: var(--green-back);
+    position: absolute;
+    /* width: 414px; */
+    width: 100vw;
+    min-width: 260px;
+    /* max-width: 400px; */
+
+    height: 270px;
+}
+
+.banner-bot__cards{
+    position: relative;
+    width: 92%;
+    max-width: 368px;
+    height: 194px;
+    margin: auto;
+    border-radius: 16px;
+    display: flex;
+    align-items: flex-end;
+    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.295));
+
+}
+
+.banner-bot__logos{
+    z-index: 3;
+    display: flex;
+    width: 100%;
+    margin: 2%;
+    align-items: center;
+    align-content: flex-;
+    gap: 4%;
+}
+.banner-bot__logos img{
+    width: 29%;
+    border-radius: 5px;
+}
+.banner-bot__logos h2{
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 900;
+    /* line-height: 27px; */
+}
+
+.banner-bot__logos p{
+    color: var(--white);
+    /* font-size: 20px; */
+    font-weight: 400;
+    /* line-height: 27px; */
+
+}
+
+.banner-bot__promo{
+    display: flex;
+    flex-direction: column;
+}
+.banner-bot__card1{
+    background-image: url('/img/disneybg.jpg');
+    background-size: cover;
+    top: -66px;
+}
+
+.banner-bot__card2{
+    top: -55px; 
+    background-image: url('/img/ProductHero.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background-size:auto */
+}
+.sombreado{
+    position: absolute;
+    border-radius: 16px;
+
+    z-index: 3;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+
+
+
+/* MEDIAS */
+
