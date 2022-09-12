@@ -29,6 +29,9 @@ app.get('/products', (req, res) => {
     res.render('product')
 })
 
+app.post('/login', (req, res) => {
+    res.render('login')
+})
 
 app.listen(PORT, () => {
     console.log('http://localhost:3030');
