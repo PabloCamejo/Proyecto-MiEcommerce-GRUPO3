@@ -1,7 +1,8 @@
 
 
-main{
-    display: flex;
+
+.banner{
+    width: 100%;
 }
 
 
@@ -29,8 +30,6 @@ main{
     margin-bottom: 27px;
 
     width: 92vw;
-    /* min-width: 360px;
-    max-width: 400px; */
 
     filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.295));
 }
@@ -147,28 +146,20 @@ main{
 @media (min-width:1000px){
    
    .container-categorias{
-    margin-top: 30px;
-    /* position: absolute; */
-    /* width: 414px; */
-    width: 100vw;
-    /* max-width: 400px; */
-
-    height: 100px;
+    margin: auto;
+    padding: 0px;
+    width: 70%;
+    height: 130px;
+    max-width: 1024px;
 }
 .categorias{
-  
-    margin: 2%;
-    padding: 10px 30px;
-    width: 96%;
+    /* padding: 10px 30px; */
+    width: 100%;
     min-width: none;
     max-width: none; 
-    /* padding: 0px; */
     height: 100%;
     background-color: var(--dark-gray);
     border-radius: 16px;
-    /* display: flex; */
-    /* align-items: center; */
-    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.295));
 }
 
 .lists-categorias{
@@ -177,8 +168,6 @@ main{
     justify-content: center;
     align-items: center;
     margin-top: 15px;
-
-
 }
 .lists-categorias li{
     color: var(--white);
@@ -198,10 +187,14 @@ main{
     fill:  white;
     width: 26px;
 }
+
+
     /* combos */
 
-    .container-combos{
-        display: flex;
+
+
+    /* .container-combos{
+
     }
     .combos__card1{
         margin-right: -120px;
@@ -212,5 +205,84 @@ main{
     }
     hr{
         width: 80px;
+    } */
+    .container-combos{
+        margin-top: 100px;
+        background-color: var(--green-back);
+        border: 2px red solid;
+        min-width: none;    
+        height: 270px;
     }
+
+    .combos{
+        width: 70%;
+        margin: auto;
+        display: flex;
+        gap: 4%;
+        /* justify-content: flex-start; */
+        border: 4px blue dashed;
+        height: 100%;
+
+    }
+    
+    .combos__cards{
+        margin: 0px;
+        position: relative;
+        width: 70%;
+        max-width: 504px;
+        max-height: 256px;
+        border-radius: 16px;
+    }
+    
+    .combos__card1{
+    
+    }
+    
+    .combos__card2{
+        background-image: url('/img/hbobg.jpg');
+        top: -66px;
+    }
+    .combos__logos{
+        z-index: 3;
+        display: flex;
+        width: 100%;
+        margin: 2%;
+        align-items: center;
+        align-content: flex-;
+        gap: 4%;
+    }
+    .combos__logos img{
+        width: 29%;
+        border-radius: 5px;
+    }
+    .combos__logos h2{
+        color: var(--white);
+        font-size: 20px;
+        font-weight: 900;
+        /* line-height: 27px; */
+    }
+    
+    .combos__logos p{
+        color: var(--white);
+        /* font-size: 20px; */
+        font-weight: 400;
+        /* line-height: 27px; */
+    
+    }
+    
+    .combos__promo{
+        display: flex;
+        flex-direction: column;
+    }
+    .sombreado{
+        position: absolute;
+        border-radius: 16px;
+    
+        z-index: 3;
+        height: 50%;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    }
+    
+    
 }
