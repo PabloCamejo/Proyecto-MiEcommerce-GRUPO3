@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 .form{
-    height: 672px;
+    height: 750px;
 }
+
 .container-form{
     height: 264px;
     background-color: #0cb093;
@@ -61,9 +62,16 @@
 .inputs input[type=submit]{
     background-color: #494f51;
     color: #ffffff;
+    border: 1px solid transparent;
+    transition: background-color 0.1s linear 0.1s;
 }
 
-.go-register{
+.inputs input[type="submit"]:hover{
+    background-color: #0cb093;
+    cursor: pointer;
+}
+
+.go-register, .go-login{
     margin-top: 70px;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
@@ -73,9 +81,10 @@
     line-height: 16px;
 }
 
-.go-register a{
+.go-register a, .go-login a{
     color: #000000;
 }
+
 
 /* Media queries Desktop */
 @media (min-width: 1200){
