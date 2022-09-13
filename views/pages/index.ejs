@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-    <%- include("../partials/head.ejs") %>
-<body>
-    <%- include("../partials/indexCards.ejs") %>
-</body>
-</html>
-
-
-
+<%- include('../partials/head.ejs', {link: ''}) %>
+<%- include('../partials/header.ejs') %>
+<main>
+<%- include("../partials/indexCards.ejs") %>
+</main>
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,80 @@
+.relleno{
+    height: 100vh;
+    background-color: aqua;
+    padding-top: 60px;
+}
+
+.footer{
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.footer--content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.footer--redes{
+    width: 100%;
+    order: 10;
+    display: flex;
+    justify-content: center;
+    color: #999999;
+}
+
+.footer--redes .fa-instagram{
+    margin: 0 1.5rem;
+}
+
+.footer--redes .fa-facebook{
+    margin-left: 1.5rem;
+}
+
+.footer--text{
+    width: 100%;
+    order: 0;
+    display: flex;
+    justify-content: center;
+    color: #999999;
+    margin: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.footer--store{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    order: 15;
+    color: #999999;
+    align-items: center;
+}
+
+.footer--store div{
+    margin: 0.5rem 1rem 1.5rem 1rem;
+
+}
+
+.fa-brands{
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 800px) {
+    .footer--content{
+        margin: 1.2rem;
+        max-width: 1200px;
+        margin: 10px auto;
+        padding: 0 10px;
+    }
+
+    .footer--redes, .footer--store, .footer--text{
+        width: unset;
+        align-items: center;
+    }
+
+    .footer--redes{
+        order: 0;
+    }
+
+}

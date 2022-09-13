@@ -1,3 +1,5 @@
 @import url(./globals.css);
 @import url(./components/cards.css);
 @import url(./components/product.css);
+@import url(components/footer.css);
+@import url(components/header.css);
