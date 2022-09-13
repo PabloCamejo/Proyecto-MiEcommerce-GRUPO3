@@ -1,20 +1,14 @@
 
-
-
 .banner{
     width: 100%;
 }
 
-
+/* BANNER DE ARRIBA */
 
 .container-categorias{
     margin-top: 30px;
-    /* position: absolute; */
-    /* width: 414px; */
     width: 100vw;
     min-width: 260px;
-    /* max-width: 400px; */
-
     height: 270px;
 }
 
@@ -50,39 +44,48 @@
 }
 
 .categorias__icons{
-    fill:  white;
     width: 18px;
 }
 
 
-
-/* COMBOS */
+/* BANNER DE ABAJO */
 
 
 .container-combos{
     margin-top: 100px;
     background-color: var(--green-back);
     position: absolute;
-    /* width: 414px; */
     width: 100vw;
     min-width: 260px;
-    /* max-width: 400px; */
-
     height: 270px;
 }
 
 .combos__cards{
     position: relative;
+    
+    display: flex;
+    align-items: flex-end;
+    
     width: 92%;
     max-width: 368px;
     height: 194px;
+    
+    border-radius: 4px;
     margin: auto;
-    border-radius: 16px;
-    display: flex;
-    align-items: flex-end;
     filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.295));
+    background-size: cover;
 
 }
+
+.combos__card1{
+    background-image: url('/img/disneybg.jpg');
+    background-size: cover;
+    top: -66px;
+}
+.combos__card2{
+    background-image: url('/img/ProductHero.jpg');
+    top: -55px; }
+
 
 .combos__logos{
     z-index: 3;
@@ -103,7 +106,6 @@
     font-weight: 900;
     /* line-height: 27px; */
 }
-
 .combos__logos p{
     color: var(--white);
     /* font-size: 20px; */
@@ -111,23 +113,9 @@
     /* line-height: 27px; */
 
 }
-
 .combos__promo{
     display: flex;
     flex-direction: column;
-}
-.combos__card1{
-    background-image: url('/img/disneybg.jpg');
-    background-size: cover;
-    top: -66px;
-}
-
-.combos__card2{
-    top: -55px; 
-    background-image: url('/img/ProductHero.jpg');
-    background-size: cover;
-    background-position: center;
-    /* background-size:auto */
 }
 .sombreado{
     position: absolute;
@@ -144,145 +132,74 @@
 /* MEDIAS */
 
 @media (min-width:1000px){
-   
-   .container-categorias{
-    margin: auto;
+
+    /* MEDIA - BANNER DE ARRIBA */
+
+.container-categorias{
     padding: 0px;
-    width: 70%;
+    width: 100%;
     height: 130px;
-    max-width: 1024px;
+    max-width: none;
 }
 .categorias{
-    /* padding: 10px 30px; */
-    width: 100%;
-    min-width: none;
-    max-width: none; 
+    width: 90%;
+    max-width: 1024px; 
     height: 100%;
-    background-color: var(--dark-gray);
     border-radius: 16px;
 }
 
 .lists-categorias{
-    height: 50%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    height: 50%;
     margin-top: 15px;
 }
-.lists-categorias li{
-    color: var(--white);
-    width: 12.25%;
-    display: flex;
-    flex-direction: column;
 
+.lists-categorias li{
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    width: 12.25%;
+    margin-left: -10px;
 }
+
 .lists-categorias li:not(:last-child){
     border-right: 2px solid white;
-
 }
 
 .categorias__icons{
-    fill:  white;
-    width: 26px;
+    width: 40px;
 }
 
 
-    /* combos */
-
-
-
-    /* .container-combos{
-
-    }
-    .combos__card1{
-        margin-right: -120px;
-    }
-    .combos__card2{
-        background-image: url('/img/hbobg.jpg');
-        top: -66px;
-    }
-    hr{
-        width: 80px;
-    } */
-    .container-combos{
-        margin-top: 100px;
-        background-color: var(--green-back);
-        border: 2px red solid;
-        min-width: none;    
-        height: 270px;
-    }
+    /* MEDIA - BANNER DE ABAJO */
 
     .combos{
-        width: 70%;
+        width: 90%;
+        max-width: 1024px; 
         margin: auto;
         display: flex;
         gap: 4%;
-        /* justify-content: flex-start; */
-        border: 4px blue dashed;
         height: 100%;
-
     }
     
     .combos__cards{
         margin: 0px;
-        position: relative;
+        height: 130%;
         width: 70%;
         max-width: 504px;
         max-height: 256px;
+
         border-radius: 16px;
-    }
-    
-    .combos__card1{
-    
+
+        top: -9%;
+
     }
     
     .combos__card2{
         background-image: url('/img/hbobg.jpg');
-        top: -66px;
     }
-    .combos__logos{
-        z-index: 3;
-        display: flex;
-        width: 100%;
-        margin: 2%;
-        align-items: center;
-        align-content: flex-;
-        gap: 4%;
-    }
-    .combos__logos img{
-        width: 29%;
-        border-radius: 5px;
-    }
-    .combos__logos h2{
-        color: var(--white);
-        font-size: 20px;
-        font-weight: 900;
-        /* line-height: 27px; */
-    }
-    
-    .combos__logos p{
-        color: var(--white);
-        /* font-size: 20px; */
-        font-weight: 400;
-        /* line-height: 27px; */
-    
-    }
-    
-    .combos__promo{
-        display: flex;
-        flex-direction: column;
-    }
-    .sombreado{
-        position: absolute;
-        border-radius: 16px;
-    
-        z-index: 3;
-        height: 50%;
-        width: 100%;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
-    }
-    
-    
+
 }
