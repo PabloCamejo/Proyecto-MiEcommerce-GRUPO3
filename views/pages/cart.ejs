@@ -12,76 +12,24 @@
                 </div>
 
                 <div class="cart-container">
-                    <article class="product-cart">
-                        <div class="cart-img-text">
-                            <figure>
-                                <img src="/img/13553-0w600h600_Jack_Daniel_With_Glasses.jpeg" alt="Producto1">
-                            </figure>
-                            <div>
-                                <p class="cart-text">Jack Daniel's Tennessy Honey Botella 750 mL</p>
-                            </div>
-                        </div>
-                        <div class="cart-footer">
-                            <button type="submit" class="button-list">Quitar</button>
-                            <div class="counter">
-                                <button type="number" class="decrement">-</button>
-                                <p>1</p>
-                                <button type="number" class="increment">+</button>
-                            </div>
-                            <div class="cart-total">
-                                <p>24.343</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="product-cart">
-                        <div class="cart-img-text">
-                            <figure>
-                                <img src="/img/13553-0w600h600_Jack_Daniel_With_Glasses.jpeg" alt="Producto1">
-                            </figure>
-                            <div class="cart-text">
-                                <p >Jack Daniel's Tennessy Honey Boodijedheodh hudehnnoco eieh iih
-                                    eoiheoheo tella 750 mL</p>
-                            </div>
-                        </div>
-                        <div class="cart-footer">
-                            <button type="submit" class="button-list">Quitar</button>
-                            <div class="counter">
-                                <button type="number" class="decrement">-</button>
-                                <p>1</p>
-                                <button type="number" class="increment">+</button>
-                            </div>
-                            <div class="cart-total">
-                                <p>24.343</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="product-cart">
-                        <div class="cart-img-text">
-                            <figure>
-                                <img src="/img/13553-0w600h600_Jack_Daniel_With_Glasses.jpeg" alt="Producto1">
-                            </figure>
-                            <div>
-                                <p class="cart-text">Jack Daniel's Tennessy Honey Botella 750 mL</p>
-                            </div>
-                        </div>
-                        <div class="cart-footer">
-                            <button type="submit" class="button-list">Quitar</button>
-                            <div class="counter">
-                                <button type="number" class="decrement">-</button>
-                                <p>1</p>
-                                <button type="number" class="increment">+</button>
-                            </div>
-                            <div class="cart-total">
-                                <p>24.343</p>
-                            </div>
-                        </div>
-                    </article>
+                    <% let acum = 0 %>
+                    <% for (product of data){%>
+
+                    <%- include('../partials/cart_card.ejs', {
+                        images: product.images, 
+                        title: product.title,
+                        price: product.price,
+                        stock: product.stock
+                    }) %>
+
+                    <% acum = acum + product.price %>
+                    <% } %>
                 </div>
 
                 <div class="cart-checkout">
                     <div class="cart-footer-main">
                         <span class="total-points-text">Total de Puntos</span>
-                        <span class="total-points">34.568</span>
+                        <span class="total-points"> <%= acum %></span>
                     </div>
                     <div class="cart-button-end">
                         <button class="button-list" type="submit">Ir a Pagar</button>

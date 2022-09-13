@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const PORT = 3030;
 const app = express();
+const data = require('./data/products.json')
+
 app.use(express.static('public'))
 
 
@@ -22,12 +24,13 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/cart', (req, res) => {
-    res.render('cart')
+    res.render('cart', {data: data})
 });
 
 app.get('/products', (req, res) => {
     res.render('product')
 })
+
 
 
 app.listen(PORT, () => {

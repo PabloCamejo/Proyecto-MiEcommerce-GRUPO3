@@ -17,15 +17,8 @@ a{
 .cart-header{
     display: flex;
     flex-direction: column;
-    width: 382px;
-}
-
-.breadCrumb{
-    background-color: coral;
-}
-
-.cart-title{
-    background-color: aquamarine;
+    max-width: 382px;
+    width: 100%;
 }
 
 .cart-link-img {
@@ -35,8 +28,9 @@ a{
 
 .product-cart{
     margin-top: 20px;
-    width: 382px;
     background-color: white;
+    max-width: 382px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
@@ -51,6 +45,7 @@ a{
 }
 
 .cart-container{
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column; 
@@ -67,12 +62,22 @@ a{
 
 .cart-text{
     margin-left: 8px;
+    text-align: left;
 }
 
 .cart-img-text{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.cart-img-text div{
+    width: 100%;
+}
+
+.cart-img-text figure img{
+    width: 64px;
+    height: 64px;
 }
 
 .cart-footer{
@@ -107,7 +112,7 @@ a{
 .decrement, .increment{
     border: none;
     background-color: transparent;
-
+    cursor: pointer;
 } 
 
 .counter{
@@ -129,47 +134,48 @@ a{
     right: 10px;
 }
 
+.total-points-text{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
 
+}
 
 .cart-footer-main{
-    background-color: aqua;
     width: 382px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.total-points-text{
-    background-color: darkkhaki;
-    
-}
-
 .total-points{
     font-size: 24px;
     font-weight: bold;
-    background-color: goldenrod;
-    
 }
 
 .cart-checkout div:nth-child(2){
     margin-top: 20px;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: end;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 .cart-checkout div:nth-child(1){
-    padding-left: 50px;
+    padding-left: 0px;
 }
 
 .cart-button-end{
-    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+
 }
 
-@media screen and (min-width: 1280px){
+
+@media screen and (min-width: 1050px){
 
     .product-cart{
-        width: 1024px;
+        max-width: 1050px;
         flex-direction: row;
     }
 
@@ -177,27 +183,37 @@ a{
         width: 704;
    }
 
+   .cart-button-end .button-list {
+        margin-right: 0px;
+
+   }
+
     .cart-footer-main{
         width: 1024px;
         flex-direction: row;
-        justify-content: start;
+        justify-content: flex-end;
+        padding-right: 8px;
     }
     
     .cart-header{
-        width: 1024px;
+        width: 100%;
+        min-width: 1050px;
     }
     
+    .total-points-text{
+        margin-right: 15px;
+    }
+
     .cart-img-text{
         display: flex;
         justify-content: start;
         align-items: center;
-        background-color: aquamarine;
         max-width: 704px;
     }
 
     .cart-checkout{
         width: 1024px;
-        background-color: firebrick;
+
     }
 
 
