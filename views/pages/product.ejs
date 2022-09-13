@@ -1,1 +1,50 @@
-product
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <div class="container">
+            <div class="nav-products">
+                <a href="/"><i class="fa-solid fa-arrow-left"></i> Volver al listado</a>
+                <p> > Alimentos</p>
+            </div>
+            <section class="section-content-products">
+                <p class="title-mobile">Coca Cola de vidrio 1 Litro - Envase retornable</p>
+                <article class="article-more-photos">
+                    <img class="img-product-secondary" src="/img/coca.jpeg" alt="">
+                    <img class="img-product-secondary" src="/img/coca.jpeg" alt="">
+                    <img class="img-product-secondary" src="/img/coca.jpeg" alt="">
+                </article>
+                <article class="img-text-principal">
+                    <img class="img-product-principal" src="/img/coca.jpeg" alt="">
+                </article>
+                <article class="content-description">
+                    <div class="text-buttons">
+                        <p class="title-desktop">Coca Cola de vidrio 1 Litro</p>
+                        <p>19.900 <span>PUNTOS</span></p>
+                        <input class="button" type="button" value="Agregar al carrito">
+                        <p class="text-description">Un verdaderamente fabuloso licor de whisky Jack Daniels.
+                            Está hecho con una mezcla de ricas especias y suave,
+                            miel tersa y el resultado es delicioso sobre hielo o café.
+                            <br><br>
+                            Aroma de caramelo y roble carbonizado, un poco de flor de
+                            naranja, miel de manuka y vainilla. 
+                            <br><br>
+                            Boca: grueso y cremoso,
+                            con notas de vainilla, roble tostado, miel de nuevo,
+                            un poco de albaricoque también. 
+                            <br><br>
+                            Acabado: De buena longitud - redondeado y rico. 
+                            No incluye vasos, la foto es sólo ilustrativa</p>
+                    </div>
+                </article>
+            </section>
+            <h3>Tambien te puede interesar</h3>
+        </div>
+
+        <%- include("../partials/indexCards.ejs") %>
+
+
+    </body>
+
+</html>
