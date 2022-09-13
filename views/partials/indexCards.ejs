@@ -4,6 +4,7 @@
     <section class="section-cards">
         <% for (let i = 0; i <= 3; i++){%>
             <%- include('./cardProduct.ejs', {
+                id: data[i].id,
                 images: data[i].images,
                 title: data[i].title, 
                 price: data[i].price
@@ -17,6 +18,7 @@
     <section class="section-cards">
         <% for (let i = 5; i <= 12; i++){%>
             <%- include('./cardProduct.ejs', {
+                id: data[i].id,
                 images: data[i].images,
                 title: data[i].title, 
                 price: data[i].price

@@ -4,6 +4,7 @@
     background-color: #ffffff;
     text-align: center;
     height: 200px;
+    margin-top: 50px;
 }
 
 .footer--content{
@@ -57,7 +58,10 @@
     font-size: 1.5rem;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
+    .footer{
+        height: 100px;
+    }
     .footer--content{
         margin: 1.2rem;
         max-width: 1200px;

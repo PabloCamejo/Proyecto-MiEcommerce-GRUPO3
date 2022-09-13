@@ -27,12 +27,15 @@ app.get('/cart', (req, res) => {
     res.render('cart', {data: data})
 });
 
-app.get('/products', (req, res) => {
-    res.render('product')
+
+
+app.get('/products/:id', (req, res) => {
+    let id = Number(req.params.id)
+    res.render('product', {data: data, id: id})
 })
 
-app.post('/login', (req, res) => {
-    res.render('login')
+app.post('/', (req, res) => {
+    res.render('index', {data: data, id: id})
 })
 
 
