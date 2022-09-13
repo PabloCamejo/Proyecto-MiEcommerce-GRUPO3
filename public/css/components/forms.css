@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.form{
+    height: 750px;
+}
+
+.container-form{
+    height: 264px;
+    background-color: #0cb093;
+}
+
+.form-login, .form-register{
+    margin: auto;
+    width: 320px;
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-login{
+    height: 296px;
+    top: 48px;
+}
+
+.form-register{
+    height: 344px;
+    top: 66px;
+}
+
+.title {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+    margin: 48px 24px 24px 32px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.inputs input{
+    width: 256px;
+    height: 32px;
+    border: 1px solid rgba(0,0,0, 0.5);
+    border-radius: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 8px 16px;
+}
+
+.inputs input[type=submit]{
+    background-color: #494f51;
+    color: #ffffff;
+    border: 1px solid transparent;
+    transition: background-color 0.1s linear 0.1s;
+}
+
+.inputs input[type="submit"]:hover{
+    background-color: #0cb093;
+    cursor: pointer;
+}
+
+.go-register, .go-login{
+    margin-top: 70px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.go-register a, .go-login a{
+    color: #000000;
+}
+
+
+/* Media queries Desktop */
+@media (min-width: 1200){
+    .form-register{
+        height: 384px;
+    }
+}
