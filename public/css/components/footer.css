@@ -1,12 +1,9 @@
-.relleno{
-    height: 100vh;
-    background-color: aqua;
-    padding-top: 60px;
-}
+
 
 .footer{
     background-color: #ffffff;
     text-align: center;
+    height: 200px;
 }
 
 .footer--content{

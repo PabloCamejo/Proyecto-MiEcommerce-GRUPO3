@@ -2,110 +2,26 @@
     <h3>Te puede interesar</h3>
 
     <section class="section-cards">
-        <article class="individual-cards">
-            <a href="/products"> <img class="image-cards" src="/img/milanesa-napolitana.jpeg" alt=""></a>
-            <div class="text-card-container">
-                <p class="product-name-cards">Nombre del producto o servicio</p>
-                <div class="product-priceLegend-cards">
-                    <p class="product-price-cards">5500</p>
-                    <p class="legend-cards">Puntos</p>
-                </div>
-            </div>
-        </article>
-        <article class="individual-cards">
-            <img class="image-cards" src="/img/milanesa-napolitana.jpeg" alt="">
-            <div class="text-card-container">
-                <p class="product-name-cards">Nombre del producto o servicio</p>
-                <div class="product-priceLegend-cards">
-                    <p class="product-price-cards">5500</p>
-                    <p class="legend-cards">Puntos</p>
-                </div>
-            </div>
-        </article>
-        <article class="individual-cards">
-            <img class="image-cards" src="/img/milanesa-napolitana.jpeg" alt="">
-            <div class="text-card-container">
-                <p class="product-name-cards">Nombre del producto o servicio</p>
-                <div class="product-priceLegend-cards">
-                    <p class="product-price-cards">5500</p>
-                    <p class="legend-cards">Puntos</p>
-                </div>
-            </div>
-        </article>
-        <article class="individual-cards">
-            <img class="image-cards" src="/img/milanesa-napolitana.jpeg" alt="">
-            <div class="text-card-container">
-                <p class="product-name-cards">Nombre del producto o servicio</p>
-                <div class="product-priceLegend-cards">
-                    <p class="product-price-cards">5500</p>
-                    <p class="legend-cards">Puntos</p>
-                </div>
-            </div>
-        </article>
+        <% for (let i = 0; i <= 3; i++){%>
+            <%- include('./cardProduct.ejs', {
+                images: data[i].images,
+                title: data[i].title, 
+                price: data[i].price
+            }) %>
+
+        <% } %>
     </section>
 
     </section>
     <h3>Los mas pedidos</h3>
     <section class="section-cards">
-        <article class="individual-cards">
-            <img class="image-cards" src="/img/milanesa-napolitana.jpeg" alt="">
-            <div class="text-card-container">
-                <p class="product-name-cards">Nombre del producto o servicio</p>
-                <div class="product-priceLegend-cards">
-                    <p class="product-price-cards">5500</p>
-                    <p class="legend-cards">Puntos</p>
-                </div>
-            </div>
-        </article>
-        <article class="individual-cards">
-            <img class="image-cards" src="/img/milanesa-napolitana.jpeg" alt="">
-            <div class="text-card-container">
-                <p class="product-name-cards">Nombre del productooooooo o servicio</p>
-                <div class="product-priceLegend-cards">
-                    <p class="product-price-cards">5500</p>
-                    <p class="legend-cards">Puntos</p>
-                </div>
-            </div>
-        </article>
-        <article class="individual-cards">
-            <img class="image-cards" src="/img/milanesa-napolitana.jpeg" alt="">
-            <div class="text-card-container">
-                <p class="product-name-cards">Nombre del productooooooo o servicio</p>
-                <div class="product-priceLegend-cards">
-                    <p class="product-price-cards">5500</p>
-                    <p class="legend-cards">Puntos</p>
-                </div>
-            </div>
-        </article>
-        <article class="individual-cards">
-            <img class="image-cards" src="/img/milanesa-napolitana.jpeg" alt="">
-            <div class="text-card-container">
-                <p class="product-name-cards">Nombre del productooooooo o servicio</p>
-                <div class="product-priceLegend-cards">
-                    <p class="product-price-cards">5500</p>
-                    <p class="legend-cards">Puntos</p>
-                </div>
-            </div>
-        </article>
-        <article class="individual-cards">
-            <img class="image-cards" src="/img/milanesa-napolitana.jpeg" alt="">
-            <div class="text-card-container">
-                <p class="product-name-cards">Nombre del productooooooo o servicio</p>
-                <div class="product-priceLegend-cards">
-                    <p class="product-price-cards">5500</p>
-                    <p class="legend-cards">Puntos</p>
-                </div>
-            </div>
-        </article>
-        <article class="individual-cards">
-            <img class="image-cards" src="/img/milanesa-napolitana.jpeg" alt="">
-            <div class="text-card-container">
-                <p class="product-name-cards">Nombre del productooooooo o servicio</p>
-                <div class="product-priceLegend-cards">
-                    <p class="product-price-cards">5500</p>
-                    <p class="legend-cards">Puntos</p>
-                </div>
-            </div>
-        </article>
+        <% for (let i = 5; i <= 12; i++){%>
+            <%- include('./cardProduct.ejs', {
+                images: data[i].images,
+                title: data[i].title, 
+                price: data[i].price
+            }) %>
+
+        <% } %>
     </section>
 </div>
