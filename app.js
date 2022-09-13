@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const PORT = 3030;
 const app = express();
+const data = require('./data/products.json')
+
 app.use(express.static('public'))
 
 
@@ -22,7 +24,7 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/cart', (req, res) => {
-    res.render('cart')
+    res.render('cart', {data: data})
 });
 
 app.get('/products', (req, res) => {
@@ -32,6 +34,7 @@ app.get('/products', (req, res) => {
 app.post('/login', (req, res) => {
     res.render('login')
 })
+
 
 app.listen(PORT, () => {
     console.log('http://localhost:3030');

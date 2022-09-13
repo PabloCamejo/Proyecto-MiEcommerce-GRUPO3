@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.all-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1162px;
+
+}
+
+.all-cards h3 {
+    display: block;
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+
+.individual-cards {
+    /* max-width: 256px; */
+    /* position: absolute; */
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    width: 393px;
+    height: 162px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 16px;
+    padding: 8px;
+    color: rgba(0, 0, 0, 1);
+    border: 1px solid black;
+    /* box-shadow: 2px 5px 2px 3px rgba(0, 0, 0, 0.25); */
+    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.295));
+}
+
+.image-cards {
+    /* position: absolute; */
+    border-radius: 8px;
+    width: 128px;
+    height: 128px;
+    margin: 8px 16px 8px 8px;
+
+    /* margin-top: calc(50% - 128px/2); */
+}
+
+.product-name-cards {
+    /* position: absolute; */
+    max-width: 215px;
+    height: 30px;
+    left: 16px;
+    right: 15px;
+    top: 8px;
+    bottom: 0px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #000000;
+}
+
+.product-price-cards {
+    left: 16px;
+    bottom: 5px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+}
+
+.legend-cards {
+    /* position: absolute; */
+    display: block;
+    left: 16px;
+    bottom: 8px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 11px;
+
+    color: #000000;
+}
+
+.text-card-container {
+    margin: 8px 8px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+}
+
+.product-priceLegend-cards {
+    margin: 8px 8px 0px 8px;
+}
+
+.individual-cards:hover {
+    filter: drop-shadow(2px 6px 4px rgba(0, 0, 0, 0.295));
+}
+
+
+
+
+@media (min-width: 780px) {
+
+    .all-cards h3 {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        width: 80%;
+    }
+
+    .section-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        /* justify-content: flex-start; */
+        max-width: 1112px;
+
+    }
+
+
+    .individual-cards {
+        /* max-width: 256px; */
+        /* position: absolute; */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: auto;
+        height: auto;
+        margin-right: 16px;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 16px;
+        padding: 0px;
+        color: rgba(0, 0, 0, 1);
+        border: 1px solid black;
+        /* box-shadow: 2px 5px 2px 3px rgba(0, 0, 0, 0.25); */
+        filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.295));
+    }
+
+
+    .image-cards {
+        /* position: absolute; */
+        border-radius: 8px;
+        width: 228px;
+        height: 240px;
+        margin: 8px;
+
+        /* margin-top: calc(50% - 128px/2); */
+    }
+
+    .product-name-cards {
+        /* position: absolute; */
+        max-width: 160px;
+        width: auto;
+        height: auto;
+        margin: 8px 0px 8px 8px;
+        padding-right: 10px;
+        border-right: 1px solid rgba(0, 0, 0, 0.25);
+
+
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+
+        color: #000000;
+    }
+
+    .product-price-cards {
+        /* position: absolute; */
+        right: 8px;
+        left: 8px;
+        top: 0px;
+        bottom: 24px;
+
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+
+
+    }
+
+    .legend-cards {
+        /* position: absolute; */
+        display: block;
+        left: 16px;
+        bottom: 8px;
+
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 8px;
+        line-height: 11px;
+
+        color: #000000;
+    }
+
+    .text-card-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        /* justify-content: space-between; */
+    }
+
+    .product-priceLegend-cards {
+        margin-left: 10px;
+    }
+
+
+}

@@ -3,3 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+:root{
+    --white: #ffffff;
+    --dark-gray: #333333;
+    --green-back: rgba(12,176,147,1);
+
+}
