@@ -1,0 +1,7 @@
+.img--mobile, .search, .profile{
+    display: none;
+}
+
+.img--desktop{
+    display: block;
+}
