@@ -147,7 +147,7 @@ a{
 }
 
 .cart-footer-main{
-    width: 382px;
+    /* width: 382px; */
     display: flex;
     justify-content: space-around;
     align-items: center;
