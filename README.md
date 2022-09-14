@@ -1,3 +1,87 @@
+_In English_
+#  Proyecto MiEcommerce Grupo3
+
+_We create the skeleton of the initial basic structure of our application using HTML, CSS, EJS and Express to transform the proposed design into a functional interface._
+
+## START 🚀
+
+_These instructions will allow you to get a copy of the project running on your local machine for development and testing purposes._
+
+## Prerequisites 📋
+
+_Have node and npm installed on your computer_ 
+_Download the stable version of node_
+
+* [NodeJS](https://nodejs.org/en/download/) - JS Runtime Environment
+
+_Verify that the installation has been correct_
+
+```javascript
+node --version
+```
+
+_Verify the npm version_
+
+```javascript
+npm version
+```
+
+## Installation 🔧
+
+_How to run the project_
+
+_Step 1: Cloning the repository_
+
+```
+git clone https://github.com/PabloCamejo/Proyecto-MiEcommerce-GRUPO3.git
+```
+
+_Step 2: Enter the folder_
+
+```
+cd Proyecto-MiEcommerce-GRUPO3
+```
+
+_Step 3: Running the Server_
+
+```
+npm run dev
+```
+
+## Build with 🛠️
+
+* HTML
+* CSS
+* [EJS](https://ejs.co/)
+* [Express](https://expressjs.com/en/starter/installing.html)
+
+
+## Authors ✒️
+
+
+* **Marcelo Daghero** - [Github](https://github.com/mgdaghero)
+* **Ignacio Barbisan** - [Github](https://github.com/NachoCencosud)
+* **Santiago del Rivero** - [Github](https://github.com/sdelrivero-cenco)
+* **Pablo Camejo** -  [Github](https://github.com/PabloCamejo)
+* **Nicolas Gula** -  [Github](https://github.com/NicolasBonzini)
+
+You can also view the list of all [contributors](https://github.com/PabloCamejo/Proyecto-MiEcommerce-GRUPO3/graphs/contributors) who have participated in this project. 
+
+## Licensed 📄
+
+This project is licensed under the ISC License
+
+
+## Expressions of Gratitude 🎁
+
+* Comment to others about this project 📢.
+* Invite a beer 🍺 or a coffee ☕ to someone on the team. 
+* Say thank you publicly 🤓.
+
+---
+
+_En español_
+
 #  Proyecto MiEcommerce Grupo3
 
 _Creamos el esqueleto de la estructura básica inicial de nuestra aplicación usando HTML Y CSS para transformar el diseño propuesto en una interfaz funcional_
