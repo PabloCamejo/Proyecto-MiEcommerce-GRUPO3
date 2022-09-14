@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 500px;
+    justify-content: center;
 }
 
 .product-car{
@@ -35,10 +36,9 @@
     /* position: absolute; */
     box-sizing: border-box;
     display: flex;
-    flex-wrap: wrap;
-    width: 393px;
-    height: 162px;
-    margin-right: 16px;
+    width: 100%;
+    min-width: 200px;
+    max-width: 398px;
     margin-bottom: 16px;
     background: rgba(255, 255, 255, 1);
     border-radius: 16px;
@@ -128,7 +128,7 @@
 
 
 
-@media (min-width: 780px) {
+@media (min-width: 1000px) {
 
     .all-cards h3 {
         max-width: 1048px;
@@ -156,6 +156,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         width: auto;
+        max-width: unset;
         height: auto;
         margin-right: 16px;
         background: rgba(255, 255, 255, 1);
@@ -165,6 +166,9 @@
         border: 1px solid rgba(109, 104, 104, 0.462);
         /* box-shadow: 2px 5px 2px 3px rgba(0, 0, 0, 0.25); */
         filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.295));
+    }
+    .individual-cards:last-child{
+        margin-right: 0;
     }
 
 
