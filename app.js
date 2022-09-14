@@ -27,10 +27,8 @@ app.get('/cart', (req, res) => {
     res.render('cart', {data: data})
 });
 
-
-
 app.get('/products/:id', (req, res) => {
-    let id = Number(req.params.id)
+    let id = Number(req.params.id);
     res.render('product', {data: data, id: id})
 })
 

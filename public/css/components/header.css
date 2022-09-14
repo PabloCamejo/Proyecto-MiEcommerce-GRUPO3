@@ -18,6 +18,10 @@
     max-width: 1300px;
 }
 
+/* a .cart{
+    text-decoration: none;
+} */
+
 .img--desktop{
     display: none;
 }
@@ -49,9 +53,9 @@
     position: relative;
 }
 
-.cart--red{
+.cart--red {
     position: absolute;
-    background-color: red;
+    background-color: red !important;
     width: 16px;
     padding: 0.25px 0;
     text-align: center;

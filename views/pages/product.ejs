@@ -1,58 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-    <%- include('../partials/head.ejs', {link: ''}) %>
+<%- include('../partials/head.ejs', {link: '' , titulo: "PRODUCT"}) %>
 
-    <body>
-        <%- include('../partials/header.ejs') %>
-        <% let card = {} 
-            for (product of data){  
-                if (product.id == id){
-                    card = product;
-                    break;
-                }
-            }%>
-        <div class="container">
-            <div class="nav-products">
-                <a href="/"><i class="fa-solid fa-arrow-left"></i> Volver al listado</a>
-                <p> > Alimentos</p>
-            </div>
-            <section class="section-content-products">
-                <p class="title-mobile"><%= card.title%></p>
-                <article class="article-more-photos">
-                    <img class="img-product-secondary" src="<%= card.images[0]%>" alt="">
-                    <img class="img-product-secondary" src="<%= card.images[1]%>" alt="">
-                    <img class="img-product-secondary" src="<%= card.images[2]%>" alt="">
-                </article>
-                <article class="img-text-principal">
-                    <img class="img-product-principal" src="<%= card.images[3]%>" alt="">
-                </article>
-                <article class="content-description">
-                    <div class="text-buttons">
-                        <p class="title-desktop"><%= card.title%></p>
-                        <p><%= card.price%> <span>PUNTOS</span></p>
-                        <input class="button" type="button" value="Agregar al carrito">
-                        <p class="text-description"><%= card.description%></p>
-                    </div>
-                </article>
-            </section>
-            <h3>Tambien te puede interesar</h3>
-        </div>
-        <div class="product-car">
 
-        <section class="section-cards ">
-            <% for (let i = 13; i <= 16; i++){%>
-                <%- include('../partials/cardProduct.ejs', {
-                    id: data[i].id,
-                    images: data[i].images,
-                    title: data[i].title, 
-                    price: data[i].price
-                }) %>
-    
-            <% } %>
-        </section>
-        </div>
-        <%- include('../partials/categorias.ejs') %>
-        <%- include('../partials/footer.ejs') %>
-    </body>
+    <%- include('../partials/header.ejs') %>
+        <% let card={} %>
+            <% for (product of data){ %>
+                <% if (product.id==id){%>
+                    <% card=product;%>
+                        <% break;%>
+                            <% } %>
+                                <% } %>
+                                    <div class="container">
+                                        <div class="nav-products">
+                                            <a href="/"><i class="fa-solid fa-arrow-left"></i> Volver al listado</a>
+                                            <p> > Alimentos</p>
+                                        </div>
+                                        <section class="section-content-products">
+                                            <p class="title-mobile">
+                                                <%= card.title%>
+                                            </p>
+                                            <article class="article-more-photos">
+                                                <img class="img-product-secondary" src="<%= card.images[0]%>" alt="">
+                                                <img class="img-product-secondary" src="<%= card.images[1]%>" alt="">
+                                                <img class="img-product-secondary" src="<%= card.images[2]%>" alt="">
+                                            </article>
+                                            <article class="img-text-principal">
+                                                <img class="img-product-principal" src="<%= card.images[3]%>" alt="">
+                                            </article>
+                                            <article class="content-description">
+                                                <div class="text-buttons">
+                                                    <p class="title-desktop">
+                                                        <%= card.title%>
+                                                    </p>
+                                                    <p>
+                                                        <%= card.price%> <span>PUNTOS</span>
+                                                    </p>
+                                                    <input class="button" type="button" value="Agregar al carrito">
+                                                    <p class="text-description">
+                                                        <%= card.description%>
+                                                    </p>
+                                                </div>
+                                            </article>
+                                        </section>
+                                        <h3>Tambien te puede interesar</h3>
+                                    </div>
+                                    <div class="product-car">
 
-</html>
+                                        <section class="section-cards ">
+                                            <% for (let i=13; i <=16; i++){%>
+                                                <%- include('../partials/cardProduct.ejs', { id: data[i].id, images:
+                                                    data[i].images, title: data[i].title, price: data[i].price }) %>
+
+                                                    <% } %>
+                                        </section>
+
+                                    </div>
+
+                                    <%- include('../partials/categorias.ejs') %>
+
+                                        <%- include('../partials/footer.ejs') %>
