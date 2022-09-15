@@ -168,7 +168,7 @@
 }
 
 .lists-categorias li:not(:last-child){
-    border-right: 2px solid white;
+    border-right: 2px solid var(--white);
 }
 
 .categorias__icons{
