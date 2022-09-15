@@ -62,19 +62,6 @@
     padding: 8px 16px;
 }
 
-@media (max-width: 360px){
-    .form-login, .form-register{
-        margin: auto 30px;
-    }
-    .title{
-        font-size: 160%;
-    }
-  
-    .inputs input{
-        width: 80%;
-    }
-}
-
 .inputs input[type=submit]{
     background-color: #494f51;
     color: #ffffff;
@@ -101,13 +88,29 @@
     color: #000000;
 }
 
-
 /* Media queries */
 
-@media (min-width: 576px){
-
+/* En medidas menores a 360px */
+@media (max-width: 360px){
+    .form-login, .form-register{
+        margin: auto 30px;
+    }
+    .title{
+        font-size: 160%;
+    }
+    .inputs input{
+        width: 80%;
+    }
 }
 
+/* En medidas mayores de 1200px */
+@media (min-width: 1200px){
+    .form-register{
+        width: 384px;
+    }
+}
+
+/* SIN USAR */
 /* @media (min-width: 768px){
     
 }
@@ -124,8 +127,3 @@
     
 } */
 
-@media (min-width: 1200){
-    .form-register{
-        height: 384px;
-    }
-}

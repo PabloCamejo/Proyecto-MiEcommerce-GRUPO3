@@ -9,7 +9,7 @@ body{
     background-color: #EFEFEF;
 }
 
-a{
+.cart-link{
     text-decoration: none;
     color: black;
 }
