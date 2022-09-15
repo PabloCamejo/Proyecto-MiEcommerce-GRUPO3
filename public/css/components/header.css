@@ -4,11 +4,11 @@
     position: fixed;
     width: 100%;
     display: flex;
-    border-bottom: 1px solid #999999;
+    border-bottom: 1px solid var(--grey-footer);
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--header-back);
     backdrop-filter: blur(4px);
     height: 64px;
 }
@@ -32,7 +32,7 @@
 }
 
 .profile--img{
-    border: 4px #494f51 solid;
+    border: 4px var(--button-back) solid;
     width: 35px; 
     border-radius: 50%;
     cursor: pointer;
@@ -42,9 +42,9 @@
 
 .fa-cart-shopping{
     font-size: 15px;
-    background-color: #494f51;
+    background-color: var(--button-back);
     border-radius: 50%;
-    color: #ffff;
+    color: var(--white);
     padding: 10px;
     margin: 0 10px 0 0;
 };
@@ -55,19 +55,19 @@
 
 .cart--red {
     position: absolute;
-    background-color: red !important;
+    background-color: var(--number-red) !important;
     width: 16px;
     padding: 0.25px 0;
     text-align: center;
     border-radius: 20px;
     font-size: 7px;
-    color: #fff;
+    color: var(--white);
     right: 58px;
 }
 
 .profile--img:hover, .fa-cart-shopping:hover{
-    background-color: #0CB093;
-    border-color: #0CB093;;
+    background-color: var(--green-back);
+    border-color: var(--green-back);
     transition: all 0.5s ease;
     cursor: pointer;
 }
@@ -82,7 +82,7 @@
     height: 30px;
     border-radius: 20px;
     padding: 10px;
-    border: 1px solid #494f51;
+    border: 1px solid var(--button-back);
 }
 
 .search button{
@@ -108,12 +108,12 @@
     }
     .profile a span{
         display: block;
-        background-color: #494f51;
+        background-color: var(--button-back);
         position: absolute;
     }
     .profile--name{
         position: relative;
-        color: #fff;
+        color: var(--white);
     }
 
     .profile--name span{
@@ -127,8 +127,8 @@
     }
 
     .profile--name span:hover, .profile--name:hover .profile--img{
-        background-color: #0CB093;
-        border-color: #0CB093;
+        background-color: var(--green-back);
+        border-color: var(--green-back);
         transition: all 0.5s ease;
     }
 
