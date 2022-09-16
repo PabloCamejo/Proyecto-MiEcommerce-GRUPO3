@@ -1,9 +1,9 @@
-
+const data = require('../data/products.json')
 
 const cartController = {
 
     getCart: (req, res) => {
-        res.render('/cart')
+        res.render('cart', {data: data})
     },
 
     //NO UTILIZARLAS EN SPRINT 2

@@ -2,7 +2,7 @@ const data = require('../data/products.json')
 
 const productController = {
 
-    getProducts: (req, res) => {
+    getIndex: (req, res) => {
         res.render('index', {data: data})
     },
 
