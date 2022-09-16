@@ -7,7 +7,7 @@ const userRoute = require('./userRoute')
 const productRoute = require('./productRoute')
 
 
-router.get('/', productRoute);
+router.use('/', productRoute);
 // router.get('/products', productRoute);
 
 // router.get('/', cartRoute);
