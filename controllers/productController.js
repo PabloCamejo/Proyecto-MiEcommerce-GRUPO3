@@ -1,4 +1,4 @@
-// const data1 = require('../data/products.json')
+const data1 = require('../data/products.json')
 const fetch = require('node-fetch')
 const { promiseImpl } = require('ejs')
 const url = 'http://localhost:5000/api/product'
