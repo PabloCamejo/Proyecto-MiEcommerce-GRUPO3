@@ -1,0 +1,10 @@
+.productError{
+    height: 70%;
+    margin-top: 10vh;
+    text-align: center;
+}
+
+.productError h1{
+    color: red;
+    font-weight: 600;
+}
