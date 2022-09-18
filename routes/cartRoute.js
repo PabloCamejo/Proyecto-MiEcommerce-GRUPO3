@@ -7,6 +7,12 @@ router.get('/cart', cartController.getCart)
 // router.get('/cart/:id', cartController.getCartById);
 
 //NO UTILIZAR EN SPRINT 2
+//IMPORTO LOS CONTROLADORES DE CART
+
+//UTILIZARLA PARA ESTE SPRINT
+// router.get('/cart/:id', cartController.getCartById);
+
+//!!!!!!!!!!!NO UTILIZAR EN SPRINT 2!!!!!!!!!!!!!!!!!!!
 // router.post('/cart', cartController.postCart);
 // router.put('/cart', cartController.putCart);
 // router.delete('/cart/:id', cartController.deleteCart);

@@ -5,10 +5,23 @@ const router = express.Router();
 
 const productController = require('../controllers/productController')
 
-router.get('/', productController.getProducts);
-router.get('/products/:id', productController.getProductById);
 
 //NO UTILIZAR EN SPRINT 2
+
+
+//IMPORTO LOS CONTROLADORES DE PRODUCT
+const productController = require('../controllers/productController')
+
+router.get('/', productController.getIndex);
+router.get('/products/:id', productController.getProductById);
+
+
+// Mensaje de error si no se encuentra producto //
+
+
+
+
+//!!!!!!!!!!!NO UTILIZAR EN SPRINT 2!!!!!!!!!!!!!!!!!!!
 // router.post('/product', productController.postProduct);
 // router.put('/product', productController.putProduct);
 // router.delete('/product/:id', productController.deleteProduct);

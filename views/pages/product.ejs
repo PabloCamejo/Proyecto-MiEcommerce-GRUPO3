@@ -2,13 +2,7 @@
 
 
     <%- include('../partials/header.ejs') %>
-        <% let card={} %>
-            <% for (product of data){ %>
-                <% if (product.id==id){%>
-                    <% card=product;%>
-                        <% break;%>
-                            <% } %>
-                                <% } %>
+    
                                     <div class="container">
                                         <div class="nav-products">
                                             <a href="/"><i class="fa-solid fa-arrow-left"></i> Volver al listado</a>
@@ -24,7 +18,7 @@
                                                 <img class="img-product-secondary" src="<%= card.images[2]%>" alt="product-img-3">
                                             </article>
                                             <article class="img-text-principal">
-                                                <img class="img-product-principal" src="<%= card.images[3]%>" alt="product-img-principal">
+                                                <img class="img-product-principal" src="<%= card.images[1]%>" alt="product-img-principal">
                                             </article>
                                             <article class="content-description">
                                                 <div class="text-buttons">
@@ -46,7 +40,7 @@
                                     <div class="product-car">
 
                                         <section class="section-cards ">
-                                            <% for (let i=13; i <=16; i++){%>
+                                            <% for (let i=1; i <=4; i++){%>
                                                 <%- include('../partials/cardProduct.ejs', { id: data[i].id, images:
                                                     data[i].images, title: data[i].title, price: data[i].price }) %>
 

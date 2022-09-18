@@ -1,15 +1,19 @@
+//IMPORTO EL ARCHIVO PRINCIPAL QUE CONTIENE EL RUTEO 
+const mainRoute = require('./routes/mainRoute')
+
 const express = require('express');
 const path = require('path');
 const PORT = 3032;
-const app = express();
-const data = require('./data/products.json')
 
-const mainRoute = require('./routes/mainRoute')
+
+const app = express();
+
+
 
 app.use(express.static('public'))
-
 app.set('views', './views/pages')
 app.set('view engine', 'ejs');
+//ACA SE DIRIGE AL ARCHIVO CON TODAS LAS RUTAS
 
 app.use('/', mainRoute);
 
@@ -40,6 +44,9 @@ app.use('/', mainRoute);
 // })
 
 
+// app.use((req,res,next) =>{
+//     res.status(404).send('Error')
+// })
 app.listen(PORT, () => {
     console.log('http://localhost:3032');
 })
