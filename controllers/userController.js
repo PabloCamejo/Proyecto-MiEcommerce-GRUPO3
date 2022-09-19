@@ -1,10 +1,11 @@
 
+
 const userController = {
-    getLogin: (req, res) => {
+    getLogin: async (req, res) => {
         res.render('login');
     },
 
-    getRegister: (req, res) => {
+    getRegister: async (req, res) => {
         res.render('register');
     },
     //NO UTILIZARLAS EN SPRINT 2

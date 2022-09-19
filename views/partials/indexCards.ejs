@@ -4,10 +4,10 @@
     <section class="section-cards">
         <% for (let i = 0; i <= 3; i++){%>
             <%- include('./cardProduct.ejs', {
-                id: data[i].id,
-                images: data[i].images,
-                title: data[i].title, 
-                price: data[i].price
+                id: bestRateProducts[i].id,
+                images: bestRateProducts[i].images,
+                title: bestRateProducts[i].title, 
+                price: bestRateProducts[i].price
             }) %>
 
         <% } %>
@@ -16,12 +16,12 @@
     </section>
     <h3>Los mas pedidos</h3>
     <section class="section-cards">
-        <% for (let i = 5; i <= 12; i++){%>
+        <% for (let i = 0; i <= 7; i++){%>
             <%- include('./cardProduct.ejs', {
-                id: data[i].id,
-                images: data[i].images,
-                title: data[i].title, 
-                price: data[i].price
+                id: bestCountProducts[i].id,
+                images: bestCountProducts[i].images,
+                title: bestCountProducts[i].title, 
+                price: bestCountProducts[i].price
             }) %>
 
         <% } %>
