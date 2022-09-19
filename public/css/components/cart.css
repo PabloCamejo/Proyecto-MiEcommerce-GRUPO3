@@ -168,6 +168,10 @@ body{
     padding-left: 0px;
 }
 
+.cart-link-button{
+    text-decoration: none;
+}
+
 .cart-button-end{
     display: flex;
     justify-content: flex-end;

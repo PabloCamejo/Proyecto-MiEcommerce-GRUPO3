@@ -1,4 +1,4 @@
-<%- include('../partials/head.ejs', {link: '' , titulo: "PRODUCT"}) %>
+<%- include('../partials/head.ejs', {link: '', titulo: `${card.title} | MiEcommerce`}) %>
 
     <%- include('../partials/header.ejs') %>
     <%# COMENTE ESTE FOR YA QUE NO ES NECESARIO, POR QUE DESDE EL CONTROLADOR SE LE PASA %> 
@@ -12,22 +12,31 @@
                             <%# } %>
                                 <%# } %> 
                                 <%# EN VES DE DATA LE PASO PRODUCT DIRECTAMENTE %> 
+
                                     <div class="container">
                                         <div class="nav-products">
                                             <a href="/"><i class="fa-solid fa-arrow-left"></i> Volver al listado</a>
-                                            <p> > Alimentos</p>
+                                            <p> > <%=card.title %></p>
                                         </div>
                                         <section class="section-content-products">
                                             <p class="title-mobile">
                                                 <%= product.title%>
                                             </p>
                                             <article class="article-more-photos">
-                                                <img class="img-product-secondary" src="<%= product.images[1]%>" alt="product-img-1">
-                                                <img class="img-product-secondary" src="<%= product.images[2]%>" alt="product-img-2">
-                                                <img class="img-product-secondary" src="<%= product.images[3]%>" alt="product-img-3">
+                                                 <%# <img class="img-product-secondary" src="<%= product.images[1]%>" alt="product-img-1">%> 
+                                                  <%#<img class="img-product-secondary" src="<%= product.images[2]%>" alt="product-img-2">%> 
+                                                 <%# <img class="img-product-secondary" src="<%= product.images[3]%>" alt="product-img-3">%> 
+                                             <%# </article>%> 
+                                             <%# <article class="img-text-principal">%> 
+                                                 <%# <img class="img-product-principal" src="<%= product.images[0]%>" alt="product-img-principal">%> 
+
+                                                <% for (images of product.images){ %>
+                                                    <img class="img-product-secondary" src="<%= images %>" alt="product-img-1">
+                                                <% } %>
                                             </article>
                                             <article class="img-text-principal">
-                                                <img class="img-product-principal" src="<%= product.images[0]%>" alt="product-img-principal">
+                                                <% let ruta = product.images[0] || '/img/notImage.png' %>
+                                                <img class="img-product-principal" src="<%= ruta %>" alt="product-img-principal">
                                             </article>
                                             <article class="content-description">
                                                 <div class="text-buttons">
@@ -55,6 +64,7 @@
                                                     images:relatedProducts[i].images, 
                                                     title: relatedProducts[i].title, 
                                                     price: relatedProducts[i].price }) %>
+
                                                     <% } %>
                                         </section>
                                     </div>

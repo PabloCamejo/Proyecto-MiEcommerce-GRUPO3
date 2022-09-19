@@ -1,13 +1,21 @@
-// const data = require('../data/products.json')
+
 const { getProducts, getProductById } = require('../services/productService')
+const { promiseImpl } = require('ejs')
+const url = 'http://localhost:5000/api/product'
+const {getNProducts, sortPopular, sortRate} = require('../services/indexServices')
+const {getProducts, getProductById} = require('../services/productService')
 
 const productController = {
 
-    getIndex: async (req, res) => {
-        let products = await getProducts();
-        let bestRateProducts = products.slice(0).sort((a,b) => b.rating.rate - a.rating.rate)
-        let bestCountProducts = products.slice(0).sort((a,b) =>  b.rating.count - a.rating.count)
-        res.render('index', { bestRateProducts, bestCountProducts});
+    // getIndex: async (req, res) => {
+        // let products = await getProducts();
+       // let bestRateProducts = products.slice(0).sort((a,b) => b.rating.rate - a.rating.rate)
+       // let bestCountProducts = products.slice(0).sort((a,b) =>  b.rating.count - a.rating.count)
+      //  res.render('index', { bestRateProducts, bestCountProducts});
+
+    getIndex: (req, res) => {
+        getProducts()
+        .then(d =>  res.render('index', {data: getNProducts(d, 4, sortRate), dataP: getNProducts(d, 8, sortPopular)}))
     },
 
     getProductById: async (req, res) => {
@@ -28,7 +36,6 @@ const productController = {
             res.render('product', { product, relatedProducts })
         }
 
-        // res.render('product', {data: product, relatedProducts})
     },
 
     //NO UTILIZARLAS EN SPRINT 2

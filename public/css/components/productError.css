@@ -1,0 +1,22 @@
+.productError{
+    height: 100%;
+    margin-top: 10vh;
+    text-align: center;
+}
+
+.banner-error{
+    height: 20%;
+}
+
+.productError > .product-car{
+    margin-top: 5%;
+}
+
+.productError > .product-car > .section-cards{
+    margin-top: 20px;
+}
+
+.productError h1{
+    color: red;
+    font-weight: 600;
+}
