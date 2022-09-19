@@ -13,12 +13,13 @@
                                                 <%= card.title%>
                                             </p>
                                             <article class="article-more-photos">
-                                                <img class="img-product-secondary" src="<%= card.images[0]%>" alt="product-img-1">
-                                                <img class="img-product-secondary" src="<%= card.images[1]%>" alt="product-img-2">
-                                                <img class="img-product-secondary" src="<%= card.images[2]%>" alt="product-img-3">
+                                                <% for (images of card.images){ %>
+                                                    <img class="img-product-secondary" src="<%= images %>" alt="product-img-1">
+                                                <% } %>
                                             </article>
                                             <article class="img-text-principal">
-                                                <img class="img-product-principal" src="<%= card.images[1]%>" alt="product-img-principal">
+                                                <% let ruta = card.images[0] || '/img/notImage.png' %>
+                                                <img class="img-product-principal" src="<%= ruta %>" alt="product-img-principal">
                                             </article>
                                             <article class="content-description">
                                                 <div class="text-buttons">

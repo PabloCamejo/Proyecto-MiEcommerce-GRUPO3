@@ -2,7 +2,7 @@
     <h3>Te puede interesar</h3>
 
     <section class="section-cards">
-        <% for (let i = 0; i <= 3; i++){%>
+        <% for (let i = 0; i < data.length; i++){%>
             <%- include('./cardProduct.ejs', {
                 id: data[i].id,
                 images: data[i].images,
@@ -16,12 +16,12 @@
     </section>
     <h3>Los mas pedidos</h3>
     <section class="section-cards">
-        <% for (let i = 5; i <= 12; i++){%>
+        <% for (let i = 0; i < dataP.length; i++){%>
             <%- include('./cardProduct.ejs', {
-                id: data[i].id,
-                images: data[i].images,
-                title: data[i].title, 
-                price: data[i].price
+                id: dataP[i].id,
+                images: dataP[i].images,
+                title: dataP[i].title, 
+                price: dataP[i].price
             }) %>
 
         <% } %>

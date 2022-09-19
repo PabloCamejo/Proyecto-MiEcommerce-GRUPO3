@@ -16,7 +16,7 @@ const productRoute = require('./productRoute')
 //REDIRIGE LA RUTA CORRESPONDIENTE
 router.use('/', productRoute);
 router.use('/', cartRoute);
-router.get('/', checkoutRoute);
+router.use('/', checkoutRoute);
 router.use('/', userRoute);
 
 module.exports = router;

@@ -10,7 +10,6 @@ const productController = require('../controllers/productController')
 
 
 //IMPORTO LOS CONTROLADORES DE PRODUCT
-const productController = require('../controllers/productController')
 
 router.get('/', productController.getIndex);
 router.get('/products/:id', productController.getProductById);

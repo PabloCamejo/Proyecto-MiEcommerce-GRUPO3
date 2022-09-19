@@ -151,7 +151,7 @@
 
 }
 
-.article-more-photos img:nth-child(2) {
+.article-more-photos img:nth-child(1) {
     border: 3px solid var(--number-red);
 }
 
