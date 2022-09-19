@@ -14,5 +14,4 @@ module.exports = {
     getNProducts,
     sortPopular,
     sortRate
-}
-    ;
+};

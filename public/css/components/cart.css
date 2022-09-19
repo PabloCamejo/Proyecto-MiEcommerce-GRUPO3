@@ -106,6 +106,7 @@ body{
     border: none;
     color: var(--white);
     transition: background-color 0.5s;
+    cursor: pointer;
 }
 
 .button-list:hover{

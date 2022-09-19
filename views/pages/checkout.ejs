@@ -1,6 +1,27 @@
-<body>
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs', {link: '/public/css/styles.css' , titulo: "501-NotImplemented" }) %>
+
+    <body>
+        <%- include('../partials/header.ejs') %>
+            <main class="container-501">
+                <div class="text-container-501">
+                    <h1>Oops..😖! Página no implementada - (501) </h1>
+                </div>
+                <!-- <div class="button-slider" text="Go to HOME"><a href="./index.ejs">Click Me</a></div> -->
+                <a class="checkout-link" href="./cart"><div class="button-slider" text="Back to Cart">Volver al Carrito</div></a>
+            </main>
+            <%- include('../partials/footer.ejs') %>
+    </body>
+
+</html>
+
+
+
+
+<!-- <body>
     <section>
         <h3>Oops...😖! Not Implemented (501)</h3>
         <a href="/cart">Volver al Carrito</a>
     </section>
-</body>
+</body> -->
