@@ -13,6 +13,8 @@ app.set('view engine', 'ejs');
 //ACA SE DIRIGE AL ARCHIVO CON TODAS LAS RUTAS
 app.use('/', mainRoute);
 
+
+
 // app.use((req,res,next) =>{
 //     res.status(404).send('Error')
 // })
