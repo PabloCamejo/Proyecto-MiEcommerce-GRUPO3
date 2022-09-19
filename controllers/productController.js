@@ -1,13 +1,15 @@
 // const datas = require('../data/products.json')
 const { promiseImpl } = require('ejs')
+
+const url = 'http://localhost:5000/api/product'
+const {getNProducts, sortPopular, sortRate} = require('../services/indexServices')
 const {getProducts, getProductById} = require('../services/productService')
 
 const productController = {
 
     getIndex: (req, res) => {
         getProducts()
-        .then(response => response.json())
-        .then(d =>  (res.render('index', {data: d})))
+        .then(d =>  res.render('index', {data: getNProducts(d, 4, sortRate), dataP: getNProducts(d, 8, sortPopular)}))
     },
 
     getProductById: (req, res) => {

@@ -1,8 +1,15 @@
+
+
 const express = require('express');
 const router = express.Router();
 
-//IMPORTO LOS CONTROLADORES DE PRODUCT
 const productController = require('../controllers/productController')
+
+
+//NO UTILIZAR EN SPRINT 2
+
+
+//IMPORTO LOS CONTROLADORES DE PRODUCT
 
 router.get('/', productController.getIndex);
 router.get('/products/:id', productController.getProductById);

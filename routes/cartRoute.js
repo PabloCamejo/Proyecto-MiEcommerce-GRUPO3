@@ -1,9 +1,14 @@
 const express = require('express');
 const router = express.Router();
-//IMPORTO LOS CONTROLADORES DE CART
+
 const cartController = require('../controllers/cartController')
 
 router.get('/cart', cartController.getCart)
+// router.get('/cart/:id', cartController.getCartById);
+
+//NO UTILIZAR EN SPRINT 2
+//IMPORTO LOS CONTROLADORES DE CART
+
 //UTILIZARLA PARA ESTE SPRINT
 // router.get('/cart/:id', cartController.getCartById);
 

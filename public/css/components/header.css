@@ -126,7 +126,7 @@
         cursor: pointer;
     }
 
-    .profile--name span:hover, .profile--name:hover .profile--img{
+    .profile--name span:hover, .profile--name:hover .profile--img, .profile--img:hover + span{
         background-color: var(--green-back);
         border-color: var(--green-back);
         transition: all 0.5s ease;
