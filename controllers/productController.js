@@ -2,7 +2,7 @@ const data1 = require('../data/products.json')
 const fetch = require('node-fetch')
 const { promiseImpl } = require('ejs')
 const url = 'http://localhost:5000/api/product'
-const {getNProducts, sortPopular} = require('../services/indexServices')
+const {getNProducts, sortPopular, sortRate} = require('../services/indexServices')
 
 const productController = {
 
@@ -16,7 +16,7 @@ const productController = {
     getIndex: (req, res) => {
         fetch(url)
         .then(response => response.json())
-        .then(d =>  res.render('index', {data: getNProducts(d, 4), dataP: getNProducts(d, 8, sortPopular)}))
+        .then(d =>  res.render('index', {data: getNProducts(d, 4, sortRate), dataP: getNProducts(d, 8, sortPopular)}))
         // .then(data => console.log(data))
         
         // res.render('index', {data: data})
