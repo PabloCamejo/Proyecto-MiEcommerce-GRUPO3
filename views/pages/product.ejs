@@ -1,12 +1,11 @@
-<%- include('../partials/head.ejs', {link: '' , titulo: "PRODUCT"}) %>
+<%- include('../partials/head.ejs', {link: '', titulo: `${card.title} | MiEcommerce`}) %>
 
 
     <%- include('../partials/header.ejs') %>
-    
                                     <div class="container">
                                         <div class="nav-products">
                                             <a href="/"><i class="fa-solid fa-arrow-left"></i> Volver al listado</a>
-                                            <p> > Alimentos</p>
+                                            <p> > <%=card.title %></p>
                                         </div>
                                         <section class="section-content-products">
                                             <p class="title-mobile">
@@ -46,7 +45,6 @@
 
                                                     <% } %>
                                         </section>
-                                         
 
                                     </div>
 
