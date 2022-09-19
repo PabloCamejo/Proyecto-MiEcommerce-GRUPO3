@@ -6,6 +6,8 @@ const cartController = {
         res.render('cart', {data: data})
     },
 
+    
+
     //NO UTILIZARLAS EN SPRINT 2
     // getCartById: (req, res) => {
     //     res.render('/')
