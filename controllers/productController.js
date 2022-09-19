@@ -9,9 +9,10 @@ const productController = {
 
     getIndex: (req, res) => {
         getProducts()
+        .then(resp => resp.json())
         .then(d =>  res.render('index', {data: getNProducts(d, 4, sortRate), dataP: getNProducts(d, 8, sortPopular)}))
     },
-
+    
     getProductById: (req, res) => {
         let id = Number(req.params.id);
         let index = id-1;
