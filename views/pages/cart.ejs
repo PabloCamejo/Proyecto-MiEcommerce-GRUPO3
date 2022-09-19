@@ -1,4 +1,4 @@
-<%- include('../partials/head.ejs', {link: '', titulo: "CHECKOUT"}) %>
+<%- include('../partials/head.ejs', {link: '', titulo: "Carrito | MiEcommerce"}) %>
     <main class="mainCart">
         <%- include('../partials/header.ejs') %>
             <section class="cart-section">
@@ -32,7 +32,7 @@
                         <span class="total-points"> <%= acum %></span>
                     </div>
                     <div class="cart-button-end">
-                        <button class="button-list" type="submit">Ir a Pagar</button>
+                        <a class="cart-link-button" href="/checkout"><button class="button-list" type="submit">Ir a Pagar</button></a>
                     </div>
                 </div>
 

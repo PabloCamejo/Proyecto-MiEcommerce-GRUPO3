@@ -1,7 +1,7 @@
 
 const checkoutController = {
     getCheckout: (req, res) => {
-        res.render('/checkout');
+        res.render('checkout');
     }
 }
 

@@ -1,46 +1,28 @@
-const data1 = require('../data/products.json')
-const fetch = require('node-fetch')
+// const datas = require('../data/products.json')
 const { promiseImpl } = require('ejs')
+
 const url = 'http://localhost:5000/api/product'
 const {getNProducts, sortPopular, sortRate} = require('../services/indexServices')
+const {getProducts, getProductById} = require('../services/productService')
 
 const productController = {
 
-    getProducts: (req, res) => {
-        res.render('index', {data: data})
-    },
-
-    // getIndex: (req, res) => {
-    //     res.render('index', {data: data})
-    // },
     getIndex: (req, res) => {
-        fetch(url)
-        .then(response => response.json())
+        getProducts()
         .then(d =>  res.render('index', {data: getNProducts(d, 4, sortRate), dataP: getNProducts(d, 8, sortPopular)}))
-        // .then(data => console.log(data))
-        
-        // res.render('index', {data: data})
     },
 
     getProductById: (req, res) => {
         let id = Number(req.params.id);
-
-        fetch(`http://localhost:5000/api/product/${id}`)
+        let index = id-1;
+        getProducts()
         .then(response => response.json())
-        .then(data => data.error ? res.render('../partials/productsError') : res.render('product', {card: data, data:data1
-            , id:id}))
-        
-        
-        // .catch( err => res.send('alo'))
-        // res.render('product', {data: data, id: id})
+        // Ahora hago lo siguiente. Traigo los productos. Si el producto con el ID que quiero no existe
+        // renderizo la pagina de error. Si existe, renderizo la pagina de productos, y le paso
+        //los productos, el producto con el id que quiero, y el id mismo.
+        .then(data =>  data[index] ? res.render('product', {card: data[index], data:data
+        , id:id}) : res.render('../partials/productsError', {data}) )
     },
-    // res.render('product', {data: data, id:id}
-
-
-    // getProductById: (req, res) => {
-    //     let id = Number(req.params.id);
-    //     res.render('product', {data: data, id: id})
-    // },
 
     //NO UTILIZARLAS EN SPRINT 2
     // postProduct: (req, res) => {
