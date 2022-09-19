@@ -1,36 +1,49 @@
-<%- include('../partials/head.ejs', {link: '', titulo: `${card.title} | MiEcommerce`}) %>
-
+<%- include('../partials/head.ejs', {link: '', titulo: `${product.title} | MiEcommerce`}) %>
 
     <%- include('../partials/header.ejs') %>
+    <%# COMENTE ESTE FOR YA QUE NO ES NECESARIO, POR QUE DESDE EL CONTROLADOR SE LE PASA %> 
+    <%# YA EL PRODUCTO QUE EL USUARIO SELECCIONO. CUANDO ANTES TENIAMOS EL FOR, LE PASABAMOS TODOS LOS PRODUCTOS %> 
+    <%# Y RECIEN ACA BUSCABA EL PRODUCTO QUE EL USUARIO ELIGIO %> 
+        <%# let card={} %> 
+            <%# for (product of data){ %>
+                <%# if (product.id==id){%>
+                    <%# card=product;%>
+                        <%# break;%>
+                            <%# } %>
+                                <%# } %> 
+                                <%# EN VES DE DATA LE PASO PRODUCT DIRECTAMENTE %> 
+
                                     <div class="container">
                                         <div class="nav-products">
                                             <a href="/"><i class="fa-solid fa-arrow-left"></i> Volver al listado</a>
-                                            <p> > <%=card.title %></p>
+                                            <p> > <%=product.title %></p>
                                         </div>
                                         <section class="section-content-products">
                                             <p class="title-mobile">
-                                                <%= card.title%>
+                                                <%= product.title%>
                                             </p>
                                             <article class="article-more-photos">
-                                                <% for (images of card.images){ %>
+                                                 
+
+                                                <% for (images of product.images){ %>
                                                     <img class="img-product-secondary" src="<%= images %>" alt="product-img-1">
                                                 <% } %>
                                             </article>
                                             <article class="img-text-principal">
-                                                <% let ruta = card.images[0] || '/img/notImage.png' %>
+                                                <% let ruta = product.images[0] || '/img/notImage.png' %>
                                                 <img class="img-product-principal" src="<%= ruta %>" alt="product-img-principal">
                                             </article>
                                             <article class="content-description">
                                                 <div class="text-buttons">
                                                     <p class="title-desktop">
-                                                        <%= card.title%>
+                                                        <%= product.title%>
                                                     </p>
                                                     <p>
-                                                        <%= card.price%> <span>PUNTOS</span>
+                                                        <%= product.price%> <span>PUNTOS</span>
                                                     </p>
                                                     <input class="button" type="button" value="Agregar al carrito">
                                                     <p class="text-description">
-                                                        <%= card.description%>
+                                                        <%= product.description%>
                                                     </p>
                                                 </div>
                                             </article>
@@ -38,17 +51,17 @@
                                         <h3>Tambien te puede interesar</h3>
                                     </div>
                                     <div class="product-car">
-
+                                    <%# EN VES DE DATA LE PASO RELATEDPRODUCTS (PRODUCTOS RELACIONADOS) %> 
                                         <section class="section-cards ">
-                                            <% for (let i=1; i <=4; i++){%>
-                                                <%- include('../partials/cardProduct.ejs', { id: data[i].id, images:
-                                                    data[i].images, title: data[i].title, price: data[i].price }) %>
+                                            <% for (let i=0; i < 4; i++){%>
+                                                <%- include('../partials/cardProduct.ejs', { 
+                                                    id: relatedProducts[i].id, 
+                                                    images:relatedProducts[i].images, 
+                                                    title: relatedProducts[i].title, 
+                                                    price: relatedProducts[i].price }) %>
 
                                                     <% } %>
                                         </section>
-
                                     </div>
-
                                     <%- include('../partials/categorias.ejs') %>
-
-                                        <%- include('../partials/footer.ejs') %>
+                                    <%- include('../partials/footer.ejs') %>

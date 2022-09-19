@@ -2,28 +2,26 @@
     <h3>Te puede interesar</h3>
 
     <section class="section-cards">
-        <% for (let i = 0; i < data.length; i++){%>
+        <% for (let i = 0; i < dataRate.length; i++){%>
             <%- include('./cardProduct.ejs', {
-                id: data[i].id,
-                images: data[i].images,
-                title: data[i].title, 
-                price: data[i].price
+                id: dataRate[i].id,
+                images: dataRate[i].images,
+                title: dataRate[i].title, 
+                price: dataRate[i].price
             }) %>
-
         <% } %>
     </section>
 
     </section>
     <h3>Los mas pedidos</h3>
     <section class="section-cards">
-        <% for (let i = 0; i < dataP.length; i++){%>
+        <% for (let i = 0; i < dataPopulars.length; i++){%>
             <%- include('./cardProduct.ejs', {
-                id: dataP[i].id,
-                images: dataP[i].images,
-                title: dataP[i].title, 
-                price: dataP[i].price
+                id: dataPopulars[i].id,
+                images: dataPopulars[i].images,
+                title: dataPopulars[i].title, 
+                price: dataPopulars[i].price
             }) %>
-
         <% } %>
     </section>
 </div>
