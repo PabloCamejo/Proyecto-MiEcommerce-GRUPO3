@@ -12,4 +12,6 @@ const getProductById = async (id) => {
     return dataProduct ;
 }
 
+
+
 module.exports = {getProducts, getProductById};

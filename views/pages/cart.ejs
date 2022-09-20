@@ -13,16 +13,16 @@
 
                 <div class="cart-container">
                     <% let acum = 0 %>
-                    <% for (product of data){%>
+                    <% for (product of cart){%>
 
                     <%- include('../partials/cart_card.ejs', {
                         images: product.images, 
                         title: product.title,
                         price: product.price,
-                        stock: product.stock
+                        quantity: product.quantity
                     }) %>
 
-                    <% acum = acum + product.price %>
+                    <% acum = acum + product.price * product.quantity %>
                     <% } %>
                 </div>
 
@@ -38,7 +38,7 @@
 
             </section>
 
-            <%- include('../partials/footer.ejs') %>
     </main>
+    <%- include('../partials/footer.ejs') %>
 
     </html>

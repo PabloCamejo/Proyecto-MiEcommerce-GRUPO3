@@ -1,9 +1,16 @@
 const data = require('../data/products.json')
+const {getProducts} = require('../services/productService');
+const {getNProducts} = require('../services/indexServices');
+const getCartById = require('../services/cartServices')
+
+
 
 const cartController = {
 
-    getCart: (req, res) => {
-        res.render('cart', {data: data})
+    getCart: async (req, res) => {
+
+        let data = await getCartById(1)
+        res.render('cart', {cart: getNProducts(data)})
     },
 
     //NO UTILIZARLAS EN SPRINT 2

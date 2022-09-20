@@ -11,11 +11,11 @@
         <button type="submit" class="button-list">Quitar</button>
         <div class="counter">
             <button type="number" class="decrement">-</button>
-            <p><%= stock %></p>
+            <p><%= quantity %></p>
             <button type="number" class="increment">+</button>
         </div>
         <div class="cart-total">
-            <p><%= price %></p>
+            <p><%= price * quantity %></p>
         </div>
     </div>
 </article> 
