@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<%- include('../partials/head.ejs', {link: '/public/css/styles.css' , titulo: "404-NotFound" }) %>
-
-    <body>
-        <%- include('../partials/header.ejs') %>
-            <main class="container-404">
-                <div class="text-container-404">
-                    <h1>Ups ! Parece que no encontramos la pagina que buscabas</h1>
-                </div>
-                <!-- <div class="button-slider" text="Go to HOME"><a href="./index.ejs">Click Me</a></div> -->
-                <a href="./"><div class="button-slider" text="Go to HOME">Click Me</div></a>
-            </main>
-            <%- include('../partials/footer.ejs') %>
-    </body>
-
-</html>
+<%- include('../partials/head.ejs', {link: '/public/css/styles.css' ,
+titulo:"404-NotFound" }) %> <%- include('../partials/header.ejs') %>
+<main class="container-404">
+    <div class="text-container-404">
+    <h1>Ups ! Parece que no encontramos la pagina que buscabas</h1>
+    </div>
+    <!-- <div class="button-slider" text="Go to HOME"><a href="./index.ejs">Click Me</a></div> -->
+    <a href="./"><div class="button-slider" text="Go to HOME">Click Me</div></a>
+</main>
+<%- include('../partials/footer.ejs') %>
