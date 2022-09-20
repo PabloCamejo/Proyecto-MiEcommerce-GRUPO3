@@ -18,31 +18,41 @@ MiEcommerce`}) %> <%- include('../partials/header.ejs') %>
       <% } %>
     </article>
 
-    <article class="img-text-principal">
-      <% let ruta = product.images[0] || '/img/notImage.png' %>
-      <img
-        class="img-product-principal"
-        src="<%= ruta %>"
-        alt="product-img-principal"
-      />
-    </article>
-    <article class="content-description">
-      <div class="text-buttons">
-        <p class="title-desktop"><%= product.title%></p>
-        <p><%= product.price%> <span>PUNTOS</span></p>
-        <input class="button" type="button" value="Agregar al carrito" />
-        <p class="text-description"><%= product.description%></p>
-      </div>
-    </article>
-  </section>
-  <h3>Tambien te puede interesar</h3>
-</div>
-<div class="product-car">
-  <section class="section-cards">
-    <% for (let i=0; i < 4; i++){%> <%- include('../partials/cardProduct.ejs', {
-    id: relatedProducts[i].id, images:relatedProducts[i].images, title:
-    relatedProducts[i].title, price: relatedProducts[i].price }) %> <% } %>
-  </section>
-</div>
-<%- include('../partials/categorias.ejs') %>
-<%-include('../partials/footer.ejs') %>
+
+                                            <article class="img-text-principal">
+                                                <% let ruta = product.images[0] || '/img/notImage.png' %>
+                                                <img class="img-product-principal" src="<%= ruta %>" alt="product-img-principal">
+                                            </article>
+                                            
+                                            <article class="content-description">
+                                                <div class="text-buttons">
+                                                    <p class="title-desktop">
+                                                        <%= product.title%>
+                                                    </p>
+                                                    <p>
+                                                        <%= product.price%> <span>PUNTOS</span>
+                                                    </p>
+                                                    <input class="button" type="button" value="Agregar al carrito">
+                                                    <p class="text-description">
+                                                        <%= product.description%>
+                                                    </p>
+                                                </div>
+                                            </article>
+                                        </section>
+                                        <h3>Tambien te puede interesar</h3>
+                                    </div>
+                                    <div class="product-car">
+                                    <%# EN VES DE DATA LE PASO RELATEDPRODUCTS (PRODUCTOS RELACIONADOS) %> 
+                                        <section class="section-cards ">
+                                            <% for (let i=0; i < 4; i++){%>
+                                                <%- include('../partials/cardProduct.ejs', { 
+                                                    id: relatedProducts[i].id, 
+                                                    images:relatedProducts[i].images, 
+                                                    title: relatedProducts[i].title, 
+                                                    price: relatedProducts[i].price }) %>
+
+                                                    <% } %>
+                                        </section>
+                                    </div>
+                                    <%- include('../partials/categorias.ejs') %>
+                                    <%- include('../partials/footer.ejs') %>

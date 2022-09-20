@@ -6,6 +6,7 @@ const {getNProducts, sortPopular, sortRate} = require('../services/indexServices
 
 
 const productController = {
+
     getIndex: async (req, res) => {
         let data = await getProducts()
         res.render('index', {dataRate: getNProducts(data, 4, sortRate), dataPopulars: getNProducts(data, 8, sortPopular)})
