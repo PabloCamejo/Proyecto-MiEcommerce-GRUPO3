@@ -1,14 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-*{
-    font-family: 'Open Sans';
-}
-
-body{
-    background-color: var(--white);
-}
-
 .cart-link{
     text-decoration: none;
     color: var(--black);

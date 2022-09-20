@@ -9,6 +9,7 @@
     --border-cards: rgba(109, 104, 104, 0.462);
     --grey-footer: #999999;
     --header-back: rgba(255, 255, 255, 0.5);
+    --background-white: rgba(255, 255, 255, 0.25);
     --number-red: red;
     --border-buttons-text: #cccccc;
 }
@@ -21,5 +22,7 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
+    background-color: #efefef;
 }
+
 

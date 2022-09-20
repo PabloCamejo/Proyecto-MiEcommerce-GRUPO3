@@ -15,16 +15,15 @@
     height: auto;
     border-radius: 12px;
     box-shadow: 0px 4px 4px var(--box-shadow);
+    background-color: var(--white);
 }
 
 .img-product-principal {
-
     width: 350px;
     height: 284px;
     border-radius: 8px;
     margin: 16px 16px 8px 16px;
     object-fit: contain;
-
 }
 
 .img-product-secondary {
@@ -32,10 +31,16 @@
     height: 48px;
     margin-right: 8px;
     border-radius: 8px;
-
 }
 
+.img-product-secondary:hover{
+    border: 3px solid var(--green-back);
+    cursor: pointer;
+}
 
+.border-red{
+    border: 3px solid red;
+}
 
 .text-buttons {
     box-sizing: border-box;
@@ -44,7 +49,6 @@
     width: 350px;
     height: auto;
     margin: 0px 16px 16px 16px;
-
 }
 
 .text-buttons span {
@@ -107,6 +111,8 @@
     background-color: var(--green-back);
 }
 
+
+
 .article-more-photos {
     order: 50;
     margin-top: 0px;
@@ -146,15 +152,7 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 33px;
-
-
-
     color: var(--black);
-
-}
-
-.article-more-photos img:nth-child(1) {
-    border: 3px solid var(--number-red);
 }
 
 .title-desktop {
