@@ -3,7 +3,7 @@ const mainRoute = require('./routes/mainRoute')
 
 const express = require('express');
 const path = require('path');
-const PORT = 3032;
+const PORT = 3031;
 
 const app = express();
 
@@ -15,5 +15,5 @@ app.set('view engine', 'ejs');
 app.use('/', mainRoute);
 
 app.listen(PORT, () => {
-    console.log('http://localhost:3032');
+    console.log('http://localhost:3031');
 })
