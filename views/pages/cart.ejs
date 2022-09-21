@@ -1,4 +1,4 @@
-<%- include('../partials/head.ejs', {link: '', titulo: "CHECKOUT"}) %>
+<%- include('../partials/head.ejs', {link: '', titulo: "Carrito | MiEcommerce"}) %>
     <main class="mainCart">
         <%- include('../partials/header.ejs') %>
             <section class="cart-section">
@@ -13,16 +13,16 @@
 
                 <div class="cart-container">
                     <% let acum = 0 %>
-                    <% for (product of data){%>
+                    <% for (product of cart){%>
 
                     <%- include('../partials/cart_card.ejs', {
                         images: product.images, 
                         title: product.title,
                         price: product.price,
-                        stock: product.stock
+                        quantity: product.quantity
                     }) %>
 
-                    <% acum = acum + product.price %>
+                    <% acum = acum + product.price * product.quantity %>
                     <% } %>
                 </div>
 
@@ -32,13 +32,13 @@
                         <span class="total-points"> <%= acum %></span>
                     </div>
                     <div class="cart-button-end">
-                        <button class="button-list" type="submit">Ir a Pagar</button>
+                        <a class="cart-link-button" href="/checkout"><button class="button-list" type="submit">Ir a Pagar</button></a>
                     </div>
                 </div>
 
             </section>
 
-            <%- include('../partials/footer.ejs') %>
     </main>
+    <%- include('../partials/footer.ejs') %>
 
     </html>

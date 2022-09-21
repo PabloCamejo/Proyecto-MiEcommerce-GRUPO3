@@ -1,0 +1,20 @@
+<%- include('../partials/head.ejs', {link: 'css/components/header2.css', titulo:"Producto no encontrado || MiEcommerce"}) %> 
+<%-include('../partials/header.ejs') %>
+
+<main class="productError">
+    <div class="banner-error">
+        <h1>Ups!</h1>
+        <h2>Parece que ha intentado acceder a un producto inexistente.</h2>
+    </div>
+
+    <div class="product-car" id="product-cards-error">
+    <h2>Tambien te puede interesar...</h2>
+
+    <section id="section-cards-error" class="section-cards">
+        <% for (let i=1; i <=4; i++){%> <%- include('../partials/cardProduct.ejs',
+            { id: data[i].id, images: data[i].images, title: data[i].title, price:data[i].price }) %> <% } %>
+    </section>
+    </div>
+<%- include('../partials/categorias.ejs') %>
+</main>
+<%- include('../partials/footer.ejs') %>
