@@ -2,7 +2,11 @@ const { getProductById } = require('./productService');
 const baseUrl = "http://localhost:5000/api/cart";
 const fetch = require('node-fetch');
 
-
+const getNCart = async (id) => {
+    const resCart = await fetch(`${baseUrl}/${id}`);
+    const dataCart = await resCart.json()
+    return  dataCart.error ? 0 : dataCart.length
+}
 
 const getCartById = async (id) => {
     const resCart = await fetch(`${baseUrl}/${id}`);

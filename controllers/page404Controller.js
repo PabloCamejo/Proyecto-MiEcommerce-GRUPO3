@@ -1,6 +1,11 @@
+const getCartById = require('../services/cartServices')
+
+
 const page404Controller = {
-    getMessage: (req, res) => {
-        res.render('page404');
+    getMessage: async (req, res) => {
+        let data = await getCartById(1);
+        
+        res.render('page404', {items: data.length});
     }
 }
 

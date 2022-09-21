@@ -4,13 +4,12 @@ const {getNProducts} = require('../services/indexServices');
 const getCartById = require('../services/cartServices')
 
 
-
 const cartController = {
 
     getCart: async (req, res) => {
 
-        let data = await getCartById(1)
-        res.render('cart', {cart: getNProducts(data)})
+        let data = await getCartById(1);
+        res.render('cart', {cart: getNProducts(data), items: data.length})
     },
 
     //NO UTILIZARLAS EN SPRINT 2
@@ -28,4 +27,4 @@ const cartController = {
     // }
 }
 
-module.exports = cartController;
+module.exports = {cartController};
