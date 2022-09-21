@@ -2,7 +2,7 @@
 const { getProducts, getProductById } = require('../services/productService')
 const url = 'http://localhost:5000/api/product'
 const {getNProducts, sortPopular, sortRate} = require('../services/indexServices')
-const getCartById = require('../services/cartServices')
+const {getNCart} = require('../services/cartServices')
 
 
 
@@ -10,7 +10,7 @@ const productController = {
 
     getIndex: async (req, res) => {
         let data = await getProducts()
-        let cart = await getCartById(1)
+        let cart = await getNCart(1);
         res.render('index', {
             dataRate: getNProducts(data, 4, sortRate),
             dataPopulars: getNProducts(data, 8, sortPopular), 
@@ -27,11 +27,11 @@ const productController = {
         ])
 
         if(product.error){
-            let cart = await getCartById(1)
+            let cart = await getNCart(1);
 
             res.render('productsError', { data: products, items: cart.length } )
         }else{
-            let cart = await getCartById(1)
+            let cart = await getNCart(1);
             let relatedProducts = products.filter(p => p.category == product.category)
             res.render('product', { product, relatedProducts, items: cart.length })
         }

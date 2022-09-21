@@ -1,7 +1,6 @@
 const data = require('../data/products.json')
-const {getProducts} = require('../services/productService');
 const {getNProducts} = require('../services/indexServices');
-const getCartById = require('../services/cartServices')
+const {getCartById} = require('../services/cartServices')
 
 
 const cartController = {

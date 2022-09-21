@@ -1,9 +1,9 @@
-const getCartById = require('../services/cartServices')
+const {getNCart} = require('../services/cartServices')
 
 
 const checkoutController = {
     getCheckout: async (req, res) => {
-        let data = await getCartById(1);
+        let data = await getNCart(1);
         res.render('checkout', {items: data.length});
     }
 }

@@ -23,4 +23,7 @@ const getCartById = async (id) => {
 }
 
 
-module.exports = getCartById
+module.exports = {
+    getCartById,
+    getNCart
+}
