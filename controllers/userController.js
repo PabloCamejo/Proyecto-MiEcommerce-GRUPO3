@@ -1,11 +1,15 @@
+const {getNCart}= require('../services/cartServices')
 
 const userController = {
     getLogin: async (req, res) => {
-        res.render('login');
+        let data = await getNCart(1);
+
+        res.render('login', {items: data});
     },
 
     getRegister: async (req, res) => {
-        res.render('register');
+        let data = await getNCart(1);
+        res.render('register', {items: data});
     },
 
     //NO UTILIZARLAS EN SPRINT 2
