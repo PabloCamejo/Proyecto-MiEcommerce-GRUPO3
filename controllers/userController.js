@@ -4,12 +4,12 @@ const userController = {
     getLogin: async (req, res) => {
         let data = await getNCart(1);
 
-        res.render('login', {items: data.length});
+        res.render('login', {items: data});
     },
 
     getRegister: async (req, res) => {
         let data = await getNCart(1);
-        res.render('register', {items: data.length});
+        res.render('register', {items: data});
     },
 
     //NO UTILIZARLAS EN SPRINT 2
