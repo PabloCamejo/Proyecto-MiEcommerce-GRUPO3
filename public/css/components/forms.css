@@ -60,7 +60,7 @@
     padding: 8px 16px;
 }
 
-.inputs input[type=submit]{
+/* .inputs input[type=submit]{
     background-color: var(--button-back);
     color: var(--white);
     border: 1px solid transparent;
@@ -70,7 +70,21 @@
 .inputs input[type="submit"]:hover{
     background-color: var(--green-back);
     cursor: pointer;
+} */
+
+.login-dis{
+    background-color: var(--button-back);
+    color: rgb(192, 192, 192);
+    cursor:not-allowed;
+    border: 1px solid transparent;
+    transition: background-color 0.1s linear 0.1s;
 }
+.login-able{
+    background-color: var(--green-back);
+    cursor: pointer;
+}
+
+
 
 .go-register, .go-login{
     margin-top: 70px;
@@ -85,6 +99,22 @@
 .go-register a, .go-login a{
     color: var(--dark-gray);
 }
+
+.spanName-login{
+    color: rgb(165, 3, 3);
+    font-size: 10px;
+    margin-top: -10px;
+    text-align: left;
+}
+.spanPass-login{
+    color: rgb(165, 3, 3);
+    font-size: 10px;
+    margin-top: -10px;
+    text-align: left;
+}
+
+
+
 
 /* Media queries */
 
