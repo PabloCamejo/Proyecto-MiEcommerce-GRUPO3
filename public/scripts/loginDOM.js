@@ -1,34 +1,25 @@
-// const logForm = document.querySelector("#register-form")
 const logForm = document.forms.loginForm
-const {nombreUsuario, password} = logForm.elements
+const {nombreUsuario, password,logSubmit} = logForm.elements
 
-const logSubmit = document.querySelector("#submit-login")
-
+    //Llamo a los spans vacios donde pegare mensajes de error
 const nameSpan = document.querySelector('.spanName-login')
 const passSpan = document.querySelector('.spanPass-login')
 
 
-
-function validacion(name,pass){
-    if(name.length <= 2 ||  pass.length <= 5 ){
-        return false
-    }else{
-        return true
-    }
-}
-
+    // Validacion del formulario. 
 logForm.addEventListener('submit', (event)=>{
     const name = nombreUsuario.value;
     const pass = password.value;
 
     if(validacion(name,pass)){
-        console.log(onkeydown)
+        console.log('Todo correcto')
     }else{
         event.preventDefault()
     }
     
 })
 
+    //Eventos de los inputs
 password.addEventListener('keydown',()=>{
     const name = nombreUsuario.value;
     const pass = password.value;
@@ -43,6 +34,15 @@ nombreUsuario.addEventListener('keydown',()=>{
 })
 
 
+
+/////FUNCION DE VALIDACION Y FUNCIONES DE MENSAJES//////
+function validacion(name,pass){
+    if(name.length <= 2 ||  pass.length <= 5 ){
+        return false
+    }else{
+        return true
+    }
+}
 function getDisabled(name, pass){
     if(validacion(name,pass)){
         logSubmit.classList.remove('login-dis')
