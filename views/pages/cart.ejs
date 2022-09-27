@@ -16,6 +16,7 @@
                     <% for (product of cart){%>
 
                     <%- include('../partials/cart_card.ejs', {
+                        id: product.id,
                         images: product.images, 
                         title: product.title,
                         price: product.price,
