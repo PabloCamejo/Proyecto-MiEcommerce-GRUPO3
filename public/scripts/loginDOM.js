@@ -24,17 +24,17 @@ password.addEventListener('keydown',()=>{
     const name = nombreUsuario.value;
     const pass = password.value;
     getDisabled(name,pass);
-    passMessage(pass)
+    // passMessage(pass)
 })
 nombreUsuario.addEventListener('keydown',()=>{
     const name = nombreUsuario.value;
     const pass = password.value;
     getDisabled(name,pass);
-    nameMessage(name);
+    // nameMessage(name);
 })
 
 
-// Usuario ingresado
+
 
 
 
@@ -56,28 +56,18 @@ function getDisabled(name, pass){
     }
 }
 
-function nameMessage(name){
-    if(name.length <=2){
-        nameSpan.innerHTML='Su usuario debe tener más de 2 caracteres'
-    }else{
-        nameSpan.innerHTML=''
-    }
-}
-function passMessage(pass){
-    if(pass.length <=5){
-        passSpan.innerHTML='Su contraseña debe tener más de 5 caracteres'
-    }else{
-        passSpan.innerHTML=''
-    }
-}
-
-
-
-
-// function logIn(name,pass){
-//     let user = {
-//         userName: name,
-//         userPwd:pass
+// function nameMessage(name){
+//     if(name.length <=2){
+//         nameSpan.innerHTML='Su usuario debe tener más de 2 caracteres'
+//     }else{
+//         nameSpan.innerHTML=''
 //     }
-//     localStorage.setItem("user",JSON.stringify(user))
 // }
+// function passMessage(pass){
+//     if(pass.length <=5){
+//         passSpan.innerHTML='Su contraseña debe tener más de 5 caracteres'
+//     }else{
+//         passSpan.innerHTML=''
+//     }
+// }
+
