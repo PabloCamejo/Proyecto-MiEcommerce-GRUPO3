@@ -1,6 +1,6 @@
 .header{
     top: 0;
-    z-index: 10;
+    z-index: 1;
     position: fixed;
     width: 100%;
     display: flex;
@@ -43,10 +43,6 @@
     max-width: 1300px;
 }
 
-/* a .cart{
-    text-decoration: none;
-} */
-
 .img--desktop{
     display: none;
 }
@@ -63,7 +59,6 @@
     cursor: pointer;
     z-index: 10;
 }
-
 
 .fa-cart-shopping{
     font-size: 15px;
