@@ -3,42 +3,42 @@
         "firstname": "Nicolas",
         "lastname": "Gula",
         "email": "nicolas@example.com",
-        "password": "$2b$10$rQ3A3mTYU2zEXGh0m7wdTeEZHKt/3h2QqKc1DQnuOg.zOMEAo6d8S",
+        "password": "Nico123",
         "profilePicture": "https://robohash.org/hicveldicta.png?size=50x50&set=set3"
     },
     {
         "firstname": "Iohjan",
         "lastname": "Gula",
         "email": "iohjan@example.com",
-        "password": "$2b$10$ase6g45jV/tSyuF/r6tBQORbThQcYpIRRctIuZvnCT7pkf2KdzBWm",
+        "password": "I123",
         "profilePicture": "https://robohash.org/hicveldicta.png?size=50x50&set=set1"
     },
     {
         "firstname": "Maria",
         "lastname": "Db",
         "email": "maria@example.com",
-        "password": "$2b$10$is4xot9.OwwyzIU5Lq0ltOb45BaMV.MXCR6UdKsFBMzV9TaECcXqK",
+        "password": "Maria123",
         "profilePicture": "https://robohash.org/hicveldicta.png?size=50x50&set=set2"
     },
     {
         "firstname": "Mario",
         "lastname": "Gibert",
         "email": "mario@example.com",
-        "password": "$2b$10$BksDXVvQffrLXbv7/bThseVGsNUy0C/8ViaJShzq.vM5b.5uwrRB.",
+        "password": "Mario123",
         "profilePicture": "https://robohash.org/hicveldicta.png?size=50x50&set=set4"
     },
     {
         "firstname": "Fernanda",
         "lastname": "Perez",
         "email": "fer@example.com",
-        "password": "$2b$10$05b6Frn2dxKAiZXP/KelxODd1YrG9slljnVaQwAaKtKrBfrNk2PVG",
+        "password": "Fer123",
         "profilePicture": "https://robohash.org/hicveldicta.png?size=50x50&set=set5"
     },
     {
         "firstname": "Andres",
         "lastname": "Gomez",
         "email": "andrew@example.com",
-        "password": "$2b$10$o7WGYYUWeKRGngYFwSuzduz/mw9nercxNjQjmWizE.JD7dEezgcbG",
+        "password": "Andres123",
         "profilePicture": "https://robohash.org/hicveldicta.png?size=50x50&set=set6"
     },
     {
