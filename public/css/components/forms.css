@@ -27,8 +27,8 @@
 }
 
 .form-register{
-    height: 344px;
-    top: 66px;
+    height: 440px;
+    top: 48px;
 }
 
 .title {
@@ -90,6 +90,31 @@
 }
 
 
+
+#deshabilitado:hover{
+    cursor: not-allowed;
+    background-color: var(--button-back);
+}
+
+.inputs div{
+    position: relative;
+}
+
+.message_error{
+    color: red;
+    opacity: 0.9;
+    font-size: 10px;
+    position: absolute;
+    top: 31px;
+    left: 10px;
+}
+
+.typing-input{
+    top: 31px;
+    left: unset;
+    right: 10;
+    color: unset;
+}
 
 .go-register, .go-login{
     margin-top: 70px;
