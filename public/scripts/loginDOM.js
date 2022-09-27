@@ -12,7 +12,7 @@ logForm.addEventListener('submit', (event)=>{
     const pass = password.value;
 
     if(validacion(name,pass)){
-        console.log('Todo correcto')
+        logIn(name,pass)
     }else{
         event.preventDefault()
     }
@@ -32,6 +32,9 @@ nombreUsuario.addEventListener('keydown',()=>{
     getDisabled(name,pass);
     nameMessage(name);
 })
+
+
+// Usuario ingresado
 
 
 
@@ -71,3 +74,10 @@ function passMessage(pass){
 
 
 
+// function logIn(name,pass){
+//     let user = {
+//         userName: name,
+//         userPwd:pass
+//     }
+//     localStorage.setItem("user",JSON.stringify(user))
+// }

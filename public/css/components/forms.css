@@ -80,9 +80,10 @@
     transition: background-color 0.1s linear 0.1s;
 }
 .login-able{
+    /* transition: background-color 0.1s linear 0.1s; */
     background-color: var(--green-back);
     cursor: pointer;
-    transition: color 0.1s linear 0.1s;
+    transition: all 0.1s linear 0.1s;
 }
 .login-able:hover{
     color: white;
