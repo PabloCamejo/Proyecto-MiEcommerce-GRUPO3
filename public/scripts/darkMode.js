@@ -1,8 +1,7 @@
-//REQUIERO TODOS LOS ELEMENTOS DEL HTML A LOS CUALES LE 
-//VOY A CAMBIAR EL ESTILO O UTILIZAR PARA DICHO CAMBIO.
+//CAPTURO EL ELEMENTO BODY 
 const page = document.querySelector('body');
-const searchBar = document.querySelector('header form input');
-const header = document.querySelector('header');
+
+//CAPTURO EL ANCLA CON EL CUAL CAMBIO A DARK MODE
 const clickChangeTheme = document.querySelector('#dark-mode');
 
 //AGREGA O REMUEVE LA CLASE DARK MODE A TODA LA PAGINA
