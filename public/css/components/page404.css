@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 750px;
+    height: 100vh;
 }
 
 .container-404::before {
@@ -59,15 +59,13 @@
     white-space: nowrap;
     transform: translateY(-50%) translateX(100%);
     transition: transform 250ms ease-out;
-
 }
 
 .button-slider:hover::before {
     transform: translateY(-50%) translateX(-50%);
-
 }
 
-a{
+.button-slider{
     text-decoration: none;
     color: rgba(12,176,147,1);
 }
