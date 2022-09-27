@@ -38,10 +38,12 @@ const productController = {
         }
     },
 
+
+    //postProduct: (req, res) => {
+    //    res.render('/')
+    //},
+
     //NO UTILIZARLAS EN SPRINT 2
-    // postProduct: (req, res) => {
-    //     res.render('/')
-    // },
     // putProduct: (req, res) => {
     //     res.render('/')
     // },
