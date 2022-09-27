@@ -1,6 +1,6 @@
 .header{
     top: 0;
-    z-index: 10;
+    z-index: 1;
     position: fixed;
     width: 100%;
     display: flex;
@@ -12,15 +12,36 @@
     backdrop-filter: blur(4px);
     height: 64px;
 }
+.user-bar{
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+}
+.user-bar div{
+    font-size: 13px;
+    color: var(--grey-footer);
+
+}
+.user-bar div a{
+    color: var(--grey-footer);
+    cursor: pointer;
+    transition: all 450ms ease;
+}
+
+.user-bar div a:hover{
+    color: var(--green-back);
+
+}
+.login-bar{
+    padding-right: 8px;
+    border-right: solid 1px;
+    
+}
 
 .header--content{
     width: 100%;
     max-width: 1300px;
 }
-
-/* a .cart{
-    text-decoration: none;
-} */
 
 .img--desktop{
     display: none;
@@ -38,7 +59,6 @@
     cursor: pointer;
     z-index: 10;
 }
-
 
 .fa-cart-shopping{
     font-size: 15px;

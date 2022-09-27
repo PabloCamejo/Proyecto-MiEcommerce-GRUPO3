@@ -1,3 +1,4 @@
+
 <%- include('../partials/head.ejs', {link: '' , titulo: `${product.title} | MiEcommerce`}) %>
     <%- include('../partials/header.ejs') %>
         <div class="container">
@@ -16,7 +17,6 @@
                             onclick="changePhoto(event)" />
                         <% } %>
                 </article>
-
 
                 <article class="img-text-principal">
                     <% let ruta=product.images[0] || '/img/notImage.png' %>

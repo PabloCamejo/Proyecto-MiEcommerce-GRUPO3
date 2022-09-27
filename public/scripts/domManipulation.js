@@ -20,6 +20,7 @@ function changePhoto(e) {
   }
 }
 
+
 //marcamos imagen por mouseover
 secondaryImgs.forEach((elem, i) => {
   elem.addEventListener('mouseover', (e) => {
@@ -40,5 +41,4 @@ secondaryImgs.forEach((elem, i) => {
   })
 
 })
-
 
