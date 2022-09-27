@@ -27,8 +27,8 @@
 }
 
 .form-register{
-    height: 344px;
-    top: 66px;
+    height: 440px;
+    top: 48px;
 }
 
 .title {
@@ -60,7 +60,7 @@
     padding: 8px 16px;
 }
 
-.inputs input[type=submit]{
+/* .inputs input[type=submit]{
     background-color: var(--button-back);
     color: var(--white);
     border: 1px solid transparent;
@@ -70,6 +70,50 @@
 .inputs input[type="submit"]:hover{
     background-color: var(--green-back);
     cursor: pointer;
+} */
+
+.login-dis{
+    background-color: var(--button-back);
+    color: rgb(192, 192, 192);
+    cursor:not-allowed;
+    border: 1px solid transparent;
+    transition: background-color 0.1s linear 0.1s;
+}
+.login-able{
+    /* transition: background-color 0.1s linear 0.1s; */
+    background-color: var(--green-back);
+    cursor: pointer;
+    transition: all 0.1s linear 0.1s;
+}
+.login-able:hover{
+    color: white;
+}
+
+
+
+#deshabilitado:hover{
+    cursor: not-allowed;
+    background-color: var(--button-back);
+}
+
+.inputs div{
+    position: relative;
+}
+
+.message_error{
+    color: red;
+    opacity: 0.9;
+    font-size: 10px;
+    position: absolute;
+    top: 31px;
+    left: 10px;
+}
+
+.typing-input{
+    top: 31px;
+    left: unset;
+    right: 10;
+    color: unset;
 }
 
 .go-register, .go-login{
@@ -85,6 +129,26 @@
 .go-register a, .go-login a{
     color: var(--dark-gray);
 }
+
+.spanName-login{
+    color: rgb(165, 3, 3);
+    font-size: 10px;
+    margin-top: -10px;
+    text-align: left;
+    height: 5px;
+}
+.spanPass-login{
+    color: rgb(165, 3, 3);
+    font-size: 10px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    text-align: left;
+    height: 5px;
+
+}
+
+
+
 
 /* Media queries */
 

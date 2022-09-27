@@ -1,10 +1,12 @@
 const {getNCart}= require('../services/cartServices')
+const getUsers= require('../services/userServices')
 
 const userController = {
     getLogin: async (req, res) => {
         let data = await getNCart(1);
-
-        res.render('login', {items: data});
+        let users = await getUsers();
+        
+        res.render('login', {items: data, users: users});
     },
 
     getRegister: async (req, res) => {
@@ -12,10 +14,10 @@ const userController = {
         res.render('register', {items: data});
     },
 
-    //NO UTILIZARLAS EN SPRINT 2
-    // postLogin: (req, res) => {
-    //     res.render('/')
-    // },
+
+    postLogin: (req, res) => {
+        res.render('/')
+    },
 
     // postRegister: (req, res) => {
     //     res.render('/')
