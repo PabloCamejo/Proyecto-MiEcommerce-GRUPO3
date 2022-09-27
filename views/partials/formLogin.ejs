@@ -1,11 +1,14 @@
-<main class="form">
+<main id="register-form" class="form">
     <section class="container-form">
-        <form action="/" method="get" class="form-login">
+        <form action="/" method="get" class="form-login" name="loginForm">
             <h1 class="title">¡Hola!</h1>
             <div class="inputs">
-                <input type="text" placeholder="Tu nombre de usuario" id="nombreUsuario" name="nombreUsuario" required>
-                <input type="password" placeholder="Tu contrasena" id="password" name="password" required>
-                <input type="submit" value="Iniciar Sesion" required>
+                <input id="name-login" type="text" placeholder="Tu nombre de usuario" id="nombreUsuario" name="nombreUsuario">
+                <span class="spanName-login" name="nameSpan"></span>
+                <input id="pass-login" type="password" placeholder="Tu contrasena" id="password" name="password">
+                <span class="spanPass-login" name="passSpan"></span>
+
+                <input class="login-dis" id="submit-login" type="submit" value="Iniciar Sesion" name="logSubmit" required>
             </div>
             <p class="go-register">¿No tienes cuenta?<a href="/register">Regístrate</a></p>
         </form>
