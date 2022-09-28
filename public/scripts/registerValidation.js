@@ -3,6 +3,7 @@
 const formRegister = document.formRegister;
 const { nameR, lastnameR, emailR, passwordR, password2, sendRegister } = formRegister.elements
 let inputs = [nameR, lastnameR, emailR, passwordR, password2]
+let userExists = document.querySelector('.user__exists')
 //Errores
 let errores = [0, 0, 0, 0, 0] 
 
@@ -67,7 +68,7 @@ function passwordChange(pass){
         return ['Poco segura', 'red']
     }
     let valid = isValidPassword(pass)
-    return  !valid && (pass !== pass.toLowerCase()) ? ['Batante segura', 'green'] : ['Dificultad media', 'yellow']
+    return  !valid && (pass !== pass.toLowerCase()) ? ['Batante segura', 'green'] : ['Dificultad media', 'brown']
 }
 
 
@@ -152,14 +153,42 @@ animaciones segun seguridad de contraseña
 hacer que solo se habilite si todo ok
 hacer registro funcional y redireccion al login
 modularizar eventos en funciones
+algo paso con el color al mergear, checkear eso 
+y hacer registro funcional, que recibe si ya hay un usuario bajo el email
+
 */
 
-sendRegister.setAttribute('id', 'deshabilitado')
+//sendRegister.setAttribute('id', 'deshabilitado')
 
-formRegister.addEventListener('submit', (e) =>{
+formRegister.addEventListener('submit', async (e) =>{
     e.preventDefault()
-    if (isEqualPassword(password2.value)){
-        alert('juanito')
-    }
+
+    if (!isEqualPassword(password2.value)){
     
+    
+        const data = {
+            firstname: nameR.value,
+            lastname: lastnameR.value,
+            email: emailR.value,
+            password: passwordR.value,
+            profilePicture: "/img/pPicture.png"
+        }
+
+        try {
+            let res = await registerUser(data)
+            let resStatus = res.status
+
+            if (resStatus.status == 405) {
+                userExists.innerHTML = 'Esta cuenta de email ya pertenece a un usuario'
+            } else {
+                window.location() = '/login'
+            }
+        } catch (error) {
+            console.log(error)
+            prompt('Lo sentimos, algo salio de manera inesperada, para ayudarnos podrias generar un mensaje en este campo, lo solucionaremos a la brevedad')
+            window.location.reload()
+        }
+    }    
+
+
 })
