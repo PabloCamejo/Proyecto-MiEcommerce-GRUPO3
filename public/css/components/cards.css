@@ -6,6 +6,7 @@
     align-items: center;
     margin-top: 500px;
     justify-content: center;
+    padding: 0px 16px;
 }
 
 .product-car {
@@ -21,6 +22,7 @@
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1162px;
+    gap: 16px;
 
 }
 
