@@ -92,7 +92,9 @@
   text-decoration: none;
   color: var(--black);
 }
-
+.user-menu-bottom ul li a:hover{
+  color: var(--green-back);
+}
 .user-menu-bottom ul li:nth-child(5) {
   border-bottom: 1px solid var(--grey-footer);
 }

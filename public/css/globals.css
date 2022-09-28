@@ -31,6 +31,10 @@ body {
     color: var(--white);
 }
 
+.body-dark-mode .user-menu-bottom ul li a:hover{
+    color: var(--green-back);
+  }
+
 .body-dark-mode .main-menu{
     background-color: #495051;
     text-decoration: none;

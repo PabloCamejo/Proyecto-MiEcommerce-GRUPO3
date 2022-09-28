@@ -20,7 +20,8 @@ clickCloseMenu.addEventListener('click', function(){
 
 //AL CERRAR SESION SE GUARDAN TODOS LOS DATOS DE LOCALSTORAGE
 closeSession.addEventListener('click', function(){
-    localStorage.clear();
+    localStorage.removeItem('darkMode');
+    localStorage.removeItem('userLogged');
 })
 
 
