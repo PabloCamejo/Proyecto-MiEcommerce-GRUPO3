@@ -2,8 +2,8 @@
     <%- include('../partials/header.ejs') %>
         <div class="container">
             <div class="nav-products">
-                <a href="/"><i class="fa-solid fa-arrow-left"></i> Volver al listado</a>
-                <p>> <%=product.title %>
+                <a href="/" class="return"><i class="fa-solid fa-arrow-left"></i> Volver al listado</a>
+                <p> < <%=product.title %>
                 </p>
             </div>
             <section class="section-content-products">
@@ -27,7 +27,7 @@
                         <p class="title-desktop">
                             <%= product.title%>
                         </p>
-                        <p>
+                        <p class="price-and-points">
                             <%= product.price%> <span>PUNTOS</span>
                         </p>
                         <input class="button" type="button" value="Agregar al carrito">
