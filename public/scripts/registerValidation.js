@@ -189,6 +189,6 @@ formRegister.addEventListener('submit', async (e) =>{
             window.location.reload()
         }
     }    
-
+    window.location.reload()
 
 })
