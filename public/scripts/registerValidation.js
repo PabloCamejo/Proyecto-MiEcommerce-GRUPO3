@@ -181,7 +181,10 @@ formRegister.addEventListener('submit', async (e) =>{
             if (resStatus.status == 405) {
                 userExists.innerHTML = 'Esta cuenta de email ya pertenece a un usuario'
             } else {
-                window.location() = '/login'
+                setTimeout(() =>{
+                    window.location = '/login'
+                }, 2000)
+                
             }
         } catch (error) {
             console.log(error)
@@ -189,6 +192,8 @@ formRegister.addEventListener('submit', async (e) =>{
             window.location.reload()
         }
     }    
-    window.location.reload()
+    setTimeout(() =>{
+        window.location.reload()
+    }, 2000)
 
 })
