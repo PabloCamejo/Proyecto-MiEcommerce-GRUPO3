@@ -30,6 +30,8 @@ if(location.href == 'http://localhost:3040/' && localStorage.getItem('darkMode')
     localStorage.setItem('darkMode', false);
 }
 
+//SI EL USUARIO SE DIRIGE AL LOGIN O REGISTRO SIN CERRAR SESION, EL 
+//VALOR DE DARK MODE SE CONVIERTE A NULO
 if(location.href == 'http://localhost:3040/login' || location.href == 'http://localhost:3040/register'){
     localStorage.setItem('darkMode', null);
 }
