@@ -26,9 +26,10 @@ loginForm.addEventListener('submit', async (e) => {
         }
 
         let resp = await loginSubmit(data);
+        console.log(resp);
 
         if (resp.status.status == 200) {
-            window.location.href = 'http://localhost:3031/';
+            window.location.href = 'http://localhost:3040/';
         } else {
             divAlert.classList.toggle('show')
             loginForm.style = "display: none"

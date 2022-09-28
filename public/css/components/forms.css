@@ -89,6 +89,20 @@
     color: white;
 }
 
+#deshabilitado{
+    background-color: var(--button-back)
+}
+
+.register{
+    cursor: pointer;
+    background-color: var(--button-back);
+    color: var(--white);
+}
+
+.register:hover{
+    background-color: var(--green-back);
+    
+}
 
 
 #deshabilitado:hover{
