@@ -17,8 +17,8 @@ const setDarkMode = () => {
 //DEPENDIENDO DE SI ESTA ACTIVADO O NO
 const setTextConfigTheme = () => {
     const text = localStorage.getItem('darkMode') == "true" ? 
-        `<i class="fa-regular fa-sun"></i><a class="menu-dark-mode" href="" > Cambiar a tema claro</a></li>` :
-        `<i class="fa-regular fa-moon"></i><a href="" > Cambiar a tema oscuro</a></li>`;
+        `🌞<a class="menu-dark-mode" href="" > Cambiar a tema claro</a></li>` :
+        `🌚</i><a href="" > Cambiar a tema oscuro</a></li>`;
     
     clickChangeTheme.innerHTML = text;
 }
