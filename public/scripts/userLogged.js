@@ -5,8 +5,6 @@ const userName = document.querySelector('.user-name')
 
 const rememberUser = document.querySelector(".checkbox-remember")
 
-
-
 if(localStorage.getItem('userLogged')){
   let userLogged = JSON.parse(localStorage.getItem('userLogged')).name
   userBar.style = "display:none"

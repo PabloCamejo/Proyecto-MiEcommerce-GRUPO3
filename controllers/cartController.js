@@ -8,7 +8,6 @@ const {getCartById} = require('../services/cartServices')
 const cartController = {
 
     getCart: async (req, res) => {
-
         let data = await getCartById(0);
         res.render('cart', {cart: getNProducts(data), items: data.length})
     },
