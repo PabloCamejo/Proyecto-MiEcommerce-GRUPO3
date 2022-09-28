@@ -29,6 +29,8 @@ loginForm.addEventListener('submit', async (e) => {
         console.log(resp);
 
         if (resp.status.status == 200) {
+            localStorage.setItem("userLogged", JSON.stringify(resp.info));
+            console.log(localStorage.getItem('userLogged'));
             window.location.href = 'http://localhost:3040/';
         } else {
             divAlert.classList.toggle('show')

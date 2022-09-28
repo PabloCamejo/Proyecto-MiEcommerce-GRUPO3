@@ -3,7 +3,7 @@ const mainRoute = require('./routes/mainRoute')
 
 const express = require('express');
 const path = require('path');
-const PORT = 3031;
+const PORT = 3040;
 
 const app = express();
 
