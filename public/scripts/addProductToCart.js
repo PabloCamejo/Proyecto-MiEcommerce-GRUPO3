@@ -10,7 +10,7 @@ const id = Number(url.split('/').pop());
 
 if(window.location.href.startsWith('http://localhost:3040/products/')){
     addProd.addEventListener('click', async e => {
-        if(loggedUserId !== null){
+        if(localStorage.getItem('userLogged')){
     
             const call = await addProductToCart(loggedUserId, id);
             return window.location.href = '/cart';
