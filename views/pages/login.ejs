@@ -1,4 +1,7 @@
-<%- include('../partials/head.ejs', {link: 'css/components/header2.css', titulo: "Ingresa | MiEcommerce"}) %>
-<%- include('../partials/header.ejs') %>
-<%- include('../partials/formLogin.ejs') %>
-<%- include('../partials/footer.ejs') %>
+<%- include('../partials/head.ejs', {link: 'css/components/header2.css' , titulo: "Ingresa | MiEcommerce" }) %>
+    <%- include('../partials/header.ejs') %>
+        <%- include('../partials/formLogin.ejs') %>
+            <%- include('../partials/wrongLogin.ejs') %>
+                <%- include('../partials/footer.ejs') %>
+                    <script src="/scripts/loginServices.js" defer></script>
+                    <script src="/scripts/handleLogin.js" type="module" defer></script>

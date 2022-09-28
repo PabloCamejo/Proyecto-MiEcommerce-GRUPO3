@@ -86,7 +86,7 @@
 
 }
 
-.button-list{
+.button-list, .button-list-checkout{
     display: flex;
     align-items: center;
     justify-content: center;

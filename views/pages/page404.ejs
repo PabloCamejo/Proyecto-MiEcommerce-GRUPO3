@@ -1,10 +1,23 @@
-<%- include('../partials/head.ejs', {link: '/public/css/styles.css' ,
-titulo:"404-NotFound" }) %> <%- include('../partials/header.ejs') %>
-<main class="container-404">
-    <div class="text-container-404">
-    <h1>Ups ! Parece que no encontramos la pagina que buscabas</h1>
-    </div>
-    <!-- <div class="button-slider" text="Go to HOME"><a href="./index.ejs">Click Me</a></div> -->
-    <a href="./"><div class="button-slider" text="Go to HOME">Click Me</div></a>
-</main>
-<%- include('../partials/footer.ejs') %>
+<%- include('../partials/head.ejs', {link: '/public/css/styles.css' , titulo:"404-NotFound" }) %>
+    <%- include('../partials/header.ejs') %>
+        <main class="container-404">
+            <div class="text-container-404">
+                <% if(recPage){%>
+                    <h1 class="text-404">Ups ! Parece que no encontramos la pagina que buscabas</h1>
+                    <%}else{%>
+                        <h1 class="text-404">Pagina aun no implementada.</h1>
+                        <%}%>
+            </div>
+            <% if(recPage){%>
+                <a href="./">
+                    <div class="button-slider" text="Go to HOME">Click Me</div>
+                </a>
+                <%}else{%>
+                    <a href="/login">
+                        <div class="button-slider" text="Come Back">Click Me</div>
+                    </a>
+                    <%}%>
+
+        </main>
+        <%- include('../partials/footer.ejs') %>
+            <script src="/scripts/handleLogin.js" defer></script>

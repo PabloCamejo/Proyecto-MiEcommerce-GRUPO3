@@ -105,6 +105,7 @@
     border: none;
     border: 1 px solid var(--grey-footer);
     transition: background-color 0.5s;
+    cursor: pointer;
 }
 
 .button:hover {

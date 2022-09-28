@@ -22,13 +22,13 @@
 }
 
 .form-login{
-    height: 296px;
+    height: 350px;
     top: 48px;
 }
 
 .form-register{
-    height: 344px;
-    top: 66px;
+    height: 440px;
+    top: 48px;
 }
 
 .title {
@@ -60,7 +60,7 @@
     padding: 8px 16px;
 }
 
-.inputs input[type=submit]{
+/* .inputs input[type=submit]{
     background-color: var(--button-back);
     color: var(--white);
     border: 1px solid transparent;
@@ -70,6 +70,64 @@
 .inputs input[type="submit"]:hover{
     background-color: var(--green-back);
     cursor: pointer;
+} */
+
+.login-dis{
+    background-color: var(--button-back);
+    color: rgb(192, 192, 192);
+    cursor:not-allowed;
+    border: 1px solid transparent;
+    transition: background-color 0.1s linear 0.1s;
+}
+.login-able{
+    /* transition: background-color 0.1s linear 0.1s; */
+    background-color: var(--green-back);
+    cursor: pointer;
+    transition: all 0.1s linear 0.1s;
+}
+.login-able:hover{
+    color: white;
+}
+
+#deshabilitado{
+    background-color: var(--button-back)
+}
+
+.register{
+    cursor: pointer;
+    background-color: var(--button-back);
+    color: var(--white);
+}
+
+.register:hover{
+    background-color: var(--green-back);
+    
+}
+
+
+#deshabilitado:hover{
+    cursor: not-allowed;
+    background-color: var(--button-back);
+}
+
+.inputs div{
+    position: relative;
+}
+
+.message_error{
+    color: red;
+    opacity: 0.9;
+    font-size: 10px;
+    position: absolute;
+    top: 31px;
+    left: 10px;
+}
+
+.typing-input{
+    top: 31px;
+    left: unset;
+    right: 10;
+    color: unset;
 }
 
 .go-register, .go-login{
@@ -86,10 +144,61 @@
     color: var(--dark-gray);
 }
 
+.spanName-login{
+    color: rgb(165, 3, 3);
+    font-size: 10px;
+    margin-top: -10px;
+    text-align: left;
+    height: 5px;
+}
+.spanPass-login{
+    color: rgb(165, 3, 3);
+    font-size: 10px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    text-align: left;
+    height: 5px;
+
+}
+
+.remember-user{
+    display: flex;
+    color: var(--dark-gray);
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    font-size: 15px;
+}
+.remember-user input{
+    width: 15px;
+}
+
+
+
+
 /* Media queries */
 
 /* En medidas menores a 360px */
 @media (max-width: 360px){
+    .remember-user{
+        text-align: center;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+        color: var(--dark-gray);
+
+        width: 80%;
+        margin: 0 10% 0 10%;
+        font-size: 12px;
+    }
+    .remember-user label{
+        color: var(--dark-gray);
+
+    }
+    .remember-user .checkbox-remember{
+        width: 12px;
+    }
     .form-login, .form-register{
         margin: auto 30px;
     }

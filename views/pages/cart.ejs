@@ -4,7 +4,7 @@
             <section class="cart-section">
                 <div class="cart-header">
                     <div class="breadCrumb">
-                        <a class="cart-link" href="/"><img class="cart-link-img" src="/img/arrow-left.svg" alt="img-return">Volver</a>
+                        <a class="cart-link" href="/"><i class="fa-solid fa-arrow-left"></i> Volver</a>
                     </div>
                     <div class="cart-title">
                         <h3>Productos en tu Carrito</h3>
@@ -16,6 +16,7 @@
                     <% for (product of cart){%>
 
                     <%- include('../partials/cart_card.ejs', {
+                        id: product.id,
                         images: product.images, 
                         title: product.title,
                         price: product.price,
@@ -32,7 +33,7 @@
                         <span class="total-points"> <%= acum %></span>
                     </div>
                     <div class="cart-button-end">
-                        <a class="cart-link-button" href="/checkout"><button class="button-list" type="submit">Ir a Pagar</button></a>
+                        <a class="cart-link-button" href="/checkout"><button class="button-list-checkout" type="submit">Ir a Pagar</button></a>
                     </div>
                 </div>
 

@@ -1,0 +1,109 @@
+.wrong {
+    display: none;
+
+}
+
+.wrong.show {
+    position: relative;
+    bottom: 550px;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+    max-width: 400px;
+    max-height: 180px;
+    min-height: 150px;
+    min-width: 279px;
+    margin: auto;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 0px 12px 0px 12px;
+    box-shadow: 0px 0px 20px grey;
+    background-color: white;
+    animation-name: jumping;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes jumping {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.20);
+    }
+
+}
+
+.wrong-title {
+    font-size: 18px;
+}
+
+.wrong-text {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: right;
+
+}
+
+.wrong-primary-bt {
+    width: auto;
+    max-width: 200px;
+    height: 35px;
+    margin-left: 10px;
+    background-color: var(--green-back);
+    color: white;
+    border-radius: 12px;
+    padding: 0px 10px 0px 10px;
+    border-color: transparent;
+    transition: all 0.8s ease;
+}
+
+.wrong-primary-bt:hover {
+    position: relative;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.wrong-secondary-bt {
+    width: auto;
+    max-width: 200px;
+    height: 35px;
+    background-color: var(--dark-gray);
+    color: white;
+    border-radius: 12px;
+    padding: 0px 10px 0px 10px;
+    border-color: transparent;
+    transition: all 0.8s ease;
+}
+
+.wrong-secondary-bt:hover {
+    position: relative;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+@media (min-width:1000px) {
+
+    .wrong-title {
+        font-size: 20px;
+    }
+
+    .wrong-text {
+        font-size: 10px;
+    }
+
+
+
+
+}

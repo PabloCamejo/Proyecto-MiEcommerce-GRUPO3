@@ -1,12 +1,32 @@
 <main class="form">
     <section class="container-form">
-        <form action="/" method="get" class="form-register">
+        <form action="/" method="post" class="form-register" name="formRegister">
             <h1 class="title">¡Registrate!</h1>
             <div class="inputs">
-                <input type="email" placeholder="Tu email" required>
-                <input type="password" placeholder="Tu nueva contraseña" required>
-                <input type="password" placeholder="Repeti tu contraseña" required>
-                <input type="submit" value="Crear Cuenta">
+                <div>
+                    <input name="nameR" id="nameR" type="text" placeholder="Ingresa tu nombre" required>
+                    <small class="message_error message_error0"></small>
+                </div>
+                <div>
+                    <input name="lastnameR" id="lastnameR" type="text" placeholder="Ingresa tu apellido" required>
+                    <small class="message_error message_error1"></small>
+                </div>
+                <div>
+                    <input name="emailR" id="emailR" type="email" placeholder="Ingresa tu email" required>
+                    <small class="message_error message_error2"></small>
+                </div>
+                <div>
+                    <input name="passwordR" id="passwordR" type="password" placeholder="Ingresa una contraseña" required>
+                    <small class="message_error message_error3"></small>
+                </div>
+                <div>
+                    <input name="password2" id="password2" type="password" placeholder="Repite tu contraseña" required>
+                    <small class="message_error message_error4"></small>
+                </div>
+                <div>
+                    <input class="register" name="sendRegister" id="deshabilitado" type="submit" value="Crear Cuenta">
+                    <small class="message_error user__exists"></small>
+                </div>
             </div>
             <p class="go-login">¿Ya tienes cuenta? <a href="login" class="go-login">Inicia Sesión</a></p>
         </form>

@@ -8,11 +8,11 @@
         </div>
     </div>
     <div class="cart-footer">
-        <button type="submit" class="button-list">Quitar</button>
+        <button type="submit" name="<%= title %>" value="<%= id %>" class="button-list">Quitar</button>
         <div class="counter">
-            <button type="number" class="decrement">-</button>
-            <p><%= quantity %></p>
-            <button type="number" class="increment">+</button>
+            <button type="number" data-name="<%= title %>" data-id="<%= id %> " class="decrement">-</button>
+            <p class="result"><%= quantity %></p>
+            <button type="number" data-id="<%= id%> " class="increment">+</button>
         </div>
         <div class="cart-total">
             <p><%= price * quantity %></p>

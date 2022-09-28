@@ -1,23 +1,44 @@
+<script src="/scripts/searchBar.js" defer></script>
 <header class="header">
     <a href="/">
         <img class="img--desktop" src="/img/MiEcommerce.png" alt="Logo">
-        <img class="img--mobile" src="/img/MIE-1.png" alt="Logo">
+        <img class="img--mobile" src="/img/MiE-1.png" alt="Logo">
     </a>
-    <form class="search" action="" method="get">
-        <input type="search" placeholder="Buscar productos...">
+    <form  class="search" action="" method="get">
+        <input name="search" id="search" type="search" placeholder="Buscar productos...">
         <button>
             <i class="fas fa-regular fa-magnifying-glass"></i>
         </button>
     </form>
-    <div class="profile">
+    <div style="display: none;" class="profile">
         
-        <a href="../cart" class="cart">
-            <span class="cart--red">1</span>
+        <a href="../cart/" class="cart" id="carrito">
+            
+            <span class="cart--red"><%= items  %></span>
             <i class="fa-solid fa-cart-shopping"></i>
         </a>
         <a class="profile--name" href="">
             <img class="profile--img" src="/img/ProfilePic.png" alt="Foto de perfil">
-            <span>Olivia</span>
+            <span class="user-id">User</span>
         </a>
     </div>
+
+    <div class="user-bar">
+        <div class="login-bar">
+            <a href="../login">Login</a>
+        </div>
+        <div class="register-bar">
+            <a href="../register">Register</a>
+        </div>
+    </div>
+    
+    <%- include('../partials/userMenu.ejs') %>
+
+    <script src="/scripts/darkMode.js"></script>
+    <script src="/scripts/userMenu.js"></script>
+    
 </header>
+
+
+
+

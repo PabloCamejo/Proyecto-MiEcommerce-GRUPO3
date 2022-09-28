@@ -1,17 +1,31 @@
 const data = require('../data/products.json')
-const {getProducts} = require('../services/productService');
 const {getNProducts} = require('../services/indexServices');
-const getCartById = require('../services/cartServices')
+const {getCartById} = require('../services/cartServices')
 
+/* const userId = localStorage.getItem('id');   */
 
 
 const cartController = {
 
     getCart: async (req, res) => {
-
-        let data = await getCartById(1)
-        res.render('cart', {cart: getNProducts(data)})
+        
+        let data = await getCartById(req.params.id);
+        console.log(req.params.id)
+        res.render('cart', {cart: getNProducts(data), items: data.length})
     },
+
+    /*     addProduct: async(req, res) => {
+        let data = await getCartById(0);
+        res.render('')
+
+    } */
+
+  /*   deleteProduct: async (req, res) => {
+        let productToDelete = await deleteProduct(userId, productId);
+        res.render('cart', {cart: getNProducts(data), items: data.length})        
+
+    } */
+
 
     //NO UTILIZARLAS EN SPRINT 2
     // getCartById: (req, res) => {
@@ -28,4 +42,4 @@ const cartController = {
     // }
 }
 
-module.exports = cartController;
+module.exports = {cartController};

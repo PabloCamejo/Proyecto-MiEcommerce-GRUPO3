@@ -1,10 +1,10 @@
-:root{
+:root {
     --white: #ffffff;
     --black: #000000;
     --dark-gray: #333333;
-    --green-back: rgba(12,176,147,1);
+    --green-back: rgba(12, 176, 147, 1);
     --box-shadow: rgba(0, 0, 0, 0.25);
-    --borders: rgba(0,0,0, 0.5);
+    --borders: rgba(0, 0, 0, 0.5);
     --button-back: #494f51;
     --border-cards: rgba(109, 104, 104, 0.462);
     --grey-footer: #999999;
@@ -20,9 +20,90 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Open Sans', sans-serif;
+body {
+    font-family: "Open Sans", sans-serif;
     background-color: #efefef;
 }
 
+/* Dark Modes */
+.body-dark-mode{
+    background-color: #222222;
+    color: var(--white);
+}
+
+.body-dark-mode .user-menu-bottom ul li a:hover{
+    color: var(--green-back);
+  }
+
+.body-dark-mode .main-menu{
+    background-color: #495051;
+    text-decoration: none;
+    color: var(--white) !important;
+}
+
+.body-dark-mode header{
+    background-color: #191919;
+    color: var(--white);
+}
+
+.body-dark-mode header input{
+    background-color: #495051;
+    color: var(--white);
+}
+
+.body-dark-mode .user-name{
+    color: var(--white);
+}
+
+.body-dark-mode .user-menu-bottom ul li a{
+    background-color: #495051;
+    text-decoration: none;
+    color: var(--white) ;
+}
+
+.body-dark-mode #dark-mode{
+    background-color: #495051;
+    text-decoration: none;
+    color: var(--white) ;
+}
+
+.body-dark-mode .individual-cards,
+.body-dark-mode .section-content-products,
+.body-dark-mode .product-cart{
+    background-color: #495051;
+    text-decoration: none;
+    color: var(--white) ;
+}
+
+.body-dark-mode .product-name-cards,
+.body-dark-mode .legend-cards,
+.body-dark-mode .title-mobile,
+.body-dark-mode .title-desktop,
+.body-dark-mode .price-and-points,
+.body-dark-mode .text-description,
+.body-dark-mode h3,
+.body-dark-mode .return,
+.body-dark-mode .product-price-cards,
+.body-dark-mode .cart-link,
+.body-dark-mode .cart-link-img,
+.body-dark-mode .return,
+.body-dark-mode .price-and-points{
+    color: var(--white) !important ;
+}
+
+.body-dark-mode .button,
+.body-dark-mode .button-list{
+    background-color: var(--white);
+    color: #495051;
+}
+
+.body-dark-mode .button:hover,
+.body-dark-mode .button-list:hover{
+    color: var(--white);
+    background-color: var(--green-back);
+}
+
+.body-dark-mode .result{
+    color: #000000;
+}
 

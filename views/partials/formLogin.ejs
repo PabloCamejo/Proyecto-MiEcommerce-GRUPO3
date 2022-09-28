@@ -1,13 +1,19 @@
-<main class="form">
+<main id="register-form" class="form">
     <section class="container-form">
-        <form action="/" method="get" class="form-login">
+        <form class="form-login" name="loginForm">
             <h1 class="title">¡Hola!</h1>
             <div class="inputs">
-                <input type="text" placeholder="Tu nombre de usuario" id="nombreUsuario" name="nombreUsuario" required>
-                <input type="password" placeholder="Tu contrasena" id="password" name="password" required>
-                <input type="submit" value="Iniciar Sesion" required>
+                <input id="name-login" type="text" placeholder="Tu nombre de usuario" id="nombreUsuario" name="nombreUsuario">
+                <span class="spanName-login" name="nameSpan"></span>
+                <input id="pass-login" type="password" placeholder="Tu contrasena" id="password" name="password">
+                <span class="spanPass-login" name="passSpan"></span>
+                <div class="remember-user">
+                    <input class="checkbox-remember" type="checkbox" id="rememberUser" name="userN" value="UserRemember">
+                    <label for="vehicle1"> Deseo que se recuerde mi usuario</label>
+                </div>
+                <input class="login-dis" id="submit-login" type="submit" value="Iniciar Sesion" name="logSubmit" required>
             </div>
-            <p class="go-register">¿No tienes cuenta?<a href="/register">Regístrate</a></p>
+            <p class="go-register">¿No tienes cuenta?  <a href="/register">Regístrate</a></p>
         </form>
     </section>
 </main>

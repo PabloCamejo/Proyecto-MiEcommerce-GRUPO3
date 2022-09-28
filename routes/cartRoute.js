@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const cartController = require('../controllers/cartController')
+const {cartController} = require('../controllers/cartController')
 
-router.get('/cart', cartController.getCart)
+router.get('/cart/:id', cartController.getCart)
 // router.get('/cart/:id', cartController.getCartById);
 
 //NO UTILIZAR EN SPRINT 2
