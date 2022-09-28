@@ -54,7 +54,7 @@ function logIn(name,pass){
         userName: name,
         userPwd:pass
     }
-    localStorage.setItem("user",JSON.stringify(user))
+    // localStorage.setItem("user",JSON.stringify(user))
 }
 function logOut(){
     localStorage.removeItem('user')

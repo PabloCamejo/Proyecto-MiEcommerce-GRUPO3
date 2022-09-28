@@ -5,15 +5,15 @@ const { nameR, lastnameR, emailR, passwordR, password2, sendRegister } = formReg
 let inputs = [nameR, lastnameR, emailR, passwordR, password2]
 let userExists = document.querySelector('.user__exists')
 //Errores
-let errores = [0, 0, 0, 0, 0] 
+let errores = [0, 0, 0, 0, 0]
 
 
 //Validaciones
-function noEspacios(value){
+function noEspacios(value) {
     return value.trim() == value
 }
 //Name
-function isValidNameOrLastName(name){
+function isValidNameOrLastName(name) {
     let sinEspacios = noEspacios(name)
     if (!sinEspacios) {
         return 'No puede contener espacios al principio ni al final'
@@ -24,11 +24,11 @@ function isValidNameOrLastName(name){
         if (name[i] == Number(name[i])) number = 0
         i++
     }
-    return name.length > 1 && number ? '' : 'Debe contener mas de una letra y ningun numero'  
+    return name.length > 1 && number ? '' : 'Debe contener mas de una letra y ningun numero'
 };
 
 //Email
-function isValidEmail(email){
+function isValidEmail(email) {
     let sinEspacios = noEspacios(email)
     if (!sinEspacios) {
         return 'No puede contener espacios al principio ni al final'
@@ -39,7 +39,7 @@ function isValidEmail(email){
 
 
 //Password
-function isValidPassword(password){
+function isValidPassword(password) {
     let sinEspacios = noEspacios(password)
     if (!sinEspacios) {
         return 'No puede contener espacios al principio ni al final'
@@ -56,26 +56,26 @@ function isValidPassword(password){
         if (password[i] == Number(password[i])) number++
         i++
     }
-    if (!number){
+    if (!number) {
         return 'Debe contener al menos un numero'
     }
 
     return ''
 }
 
-function passwordChange(pass){
-    if (pass.length < 8){
+function passwordChange(pass) {
+    if (pass.length < 8) {
         return ['Poco segura', 'red']
     }
     let valid = isValidPassword(pass)
-    return  !valid && (pass !== pass.toLowerCase()) ? ['Batante segura', 'green'] : ['Dificultad media', 'brown']
+    return !valid && (pass !== pass.toLowerCase()) ? ['Batante segura', 'green'] : ['Dificultad media', 'brown']
 }
 
 
 //Password 2
-function isEqualPassword(password2){
+function isEqualPassword(password2) {
     if (passwordR.value !== password2 && password2) {
-        return 'Las contraseñas deben coincidir' 
+        return 'Las contraseñas deben coincidir'
     }
     return password2 ? '' : 'Ingrese un valor'
 }
@@ -84,7 +84,7 @@ function isEqualPassword(password2){
 const validaciones = [isValidNameOrLastName, isValidNameOrLastName, isValidEmail, isValidPassword, isEqualPassword]
 
 //Eventos
-inputs.forEach((x, i) => x.addEventListener('blur', function(){
+inputs.forEach((x, i) => x.addEventListener('blur', function () {
     let smallMessage = document.querySelector(`.message_error${i}`)
     if (smallMessage.classList.contains('typing-input')) {
         smallMessage.classList.remove('typing-input')
@@ -92,35 +92,35 @@ inputs.forEach((x, i) => x.addEventListener('blur', function(){
         smallMessage.innerText = ''
     }
     let validacion = validaciones[i](this.value)
-    if (validacion){ 
+    if (validacion) {
         smallMessage.innerText = validacion
         errores[i] = 0
         return
     };
     errores[i] = 1
     let error = errores.reduce((sum, x) => sum + x)
-    if (error == 5){
+    if (error == 5) {
         sendRegister.removeAttribute('id')
     }
 }))
 
 
 
-inputs.forEach((x, i) => x.addEventListener('focus', function(){
+inputs.forEach((x, i) => x.addEventListener('focus', function () {
     document.querySelector(`.message_error${i}`).innerText = ''
     let error = errores.reduce((sum, x) => sum + x)
-    if (error == 5){
+    if (error == 5) {
         sendRegister.removeAttribute('id')
     }
 }))
 
-inputs.forEach((x,i) => x.addEventListener('keypress', function(){
+inputs.forEach((x, i) => x.addEventListener('keypress', function () {
     let validacion = validaciones[i](this.value)
     if (!validacion) {
         errores[i] = 1
     }
     let error = errores.reduce((sum, x) => sum + x)
-    if (error == 4){
+    if (error == 4) {
         sendRegister.removeAttribute('id')
     } else {
         errores[i] = 0
@@ -128,13 +128,13 @@ inputs.forEach((x,i) => x.addEventListener('keypress', function(){
     }
 }))
 
-passwordR.addEventListener('keypress', function(e){
+passwordR.addEventListener('keypress', function (e) {
     let message = passwordChange(e.target.value)
     let smallMessage = document.querySelector(`.message_error3`)
     smallMessage.innerText = message[0]
     smallMessage.classList.add('typing-input')
     smallMessage.style.color = message[1]
-    if (password2.value == passwordR.value && passwordR.value ) {
+    if (password2.value == passwordR.value && passwordR.value) {
         errores[4] = 1
     } else {
         errores[4] = 0
@@ -143,29 +143,12 @@ passwordR.addEventListener('keypress', function(e){
 })
 
 
-
-
-
-
-
-/*
-animaciones segun seguridad de contraseña
-hacer que solo se habilite si todo ok
-hacer registro funcional y redireccion al login
-modularizar eventos en funciones
-algo paso con el color al mergear, checkear eso 
-y hacer registro funcional, que recibe si ya hay un usuario bajo el email
-
-*/
-
-//sendRegister.setAttribute('id', 'deshabilitado')
-
-formRegister.addEventListener('submit', async (e) =>{
+formRegister.addEventListener('submit', async (e) => {
     e.preventDefault()
 
-    if (!isEqualPassword(password2.value)){
-    
-    
+    if (!isEqualPassword(password2.value)) {
+
+
         const data = {
             firstname: nameR.value,
             lastname: lastnameR.value,
@@ -181,18 +164,17 @@ formRegister.addEventListener('submit', async (e) =>{
             if (resStatus.status == 405) {
                 userExists.innerHTML = 'Esta cuenta de email ya pertenece a un usuario'
             } else {
-                setTimeout(() =>{
-                    window.location = '/login'
-                }, 2000)
-                
+                window.location = '/login'
             }
+
+
         } catch (error) {
             console.log(error)
             prompt('Lo sentimos, algo salio de manera inesperada, para ayudarnos podrias generar un mensaje en este campo, lo solucionaremos a la brevedad')
             window.location.reload()
         }
-    }    
-    setTimeout(() =>{
+    }
+    setTimeout(() => {
         window.location.reload()
     }, 2000)
 
