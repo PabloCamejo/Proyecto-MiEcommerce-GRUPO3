@@ -1,7 +1,39 @@
 const userBar = document.querySelector(".user-bar")
 const profile = document.querySelector('.profile')
 const userSettings = document.querySelector('.user-id')
+
+// const {us: nombreUsuario} = logForm.elements
+
+
+const rememberUser = document.querySelector(".checkbox-remember")
+
+// RECORDAR USUARIO
+
+console.log(localStorage.getItem("Usuario recordado"))
+
+
+  if(localStorage.getItem("Usuario recordado")){
+    document.querySelector(".checkbox-remember").setAttribute('checked', localStorage.getItem("Usuario recordado"))
+  }
+
+rememberUser.addEventListener('click', ()=>{
+  // const estadoCheckbox = document.querySelector(".checkbox-remember").checked
+  // localStorage.getItem("Usuario recordado")
+
+  if(!localStorage.getItem("Usuario recordado")){
+    localStorage.setItem('Usuario recordado', true )
+  }else
+  {
+    localStorage.removeItem('Usuario recordado')
+  }
+})
+
+
+
+
+
 const userName = document.querySelector('.user-name')
+
 
 if(localStorage.getItem('user')){
   let userLogged = JSON.parse(localStorage.getItem('user'))

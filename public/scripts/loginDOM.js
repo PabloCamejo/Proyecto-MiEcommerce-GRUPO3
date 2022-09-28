@@ -1,10 +1,6 @@
 const logForm = document.forms.loginForm
 const {nombreUsuario, password,logSubmit} = logForm.elements
 
-    //Llamo a los spans vacios donde pegare mensajes de error
-const nameSpan = document.querySelector('.spanName-login')
-const passSpan = document.querySelector('.spanPass-login')
-
 
     // Validacion del formulario. 
 logForm.addEventListener('submit', (event)=>{
@@ -36,8 +32,6 @@ nombreUsuario.addEventListener('keydown',()=>{
 
 
 
-
-
 /////FUNCION DE VALIDACION Y FUNCIONES DE MENSAJES//////
 function validacion(name,pass){
     if(name.length <= 2 ||  pass.length <= 5 ){
@@ -56,18 +50,4 @@ function getDisabled(name, pass){
     }
 }
 
-// function nameMessage(name){
-//     if(name.length <=2){
-//         nameSpan.innerHTML='Su usuario debe tener más de 2 caracteres'
-//     }else{
-//         nameSpan.innerHTML=''
-//     }
-// }
-// function passMessage(pass){
-//     if(pass.length <=5){
-//         passSpan.innerHTML='Su contraseña debe tener más de 5 caracteres'
-//     }else{
-//         passSpan.innerHTML=''
-//     }
-// }
 

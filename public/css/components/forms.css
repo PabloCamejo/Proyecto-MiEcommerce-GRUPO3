@@ -161,6 +161,18 @@
 
 }
 
+.remember-user{
+    display: flex;
+    color: var(--dark-gray);
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    font-size: 15px;
+}
+.remember-user input{
+    width: 15px;
+}
+
 
 
 
@@ -168,6 +180,25 @@
 
 /* En medidas menores a 360px */
 @media (max-width: 360px){
+    .remember-user{
+        text-align: center;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+        color: var(--dark-gray);
+
+        width: 80%;
+        margin: 0 10% 0 10%;
+        font-size: 12px;
+    }
+    .remember-user label{
+        color: var(--dark-gray);
+
+    }
+    .remember-user .checkbox-remember{
+        width: 12px;
+    }
     .form-login, .form-register{
         margin: auto 30px;
     }
