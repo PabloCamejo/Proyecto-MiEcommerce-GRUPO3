@@ -5,9 +5,8 @@ const userName = document.querySelector('.user-name')
 
 const rememberUser = document.querySelector(".checkbox-remember")
 
-
-
   // Cambio la barra del headr dependiendo si el usuario esta loggeado o no
+
 if(localStorage.getItem('userLogged')){
   let userLogged = JSON.parse(localStorage.getItem('userLogged')).name
   userBar.style = "display:none"
