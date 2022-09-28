@@ -1,12 +1,14 @@
 const userBar = document.querySelector(".user-bar")
 const profile = document.querySelector('.profile')
 const userSettings = document.querySelector('.user-id')
+const userName = document.querySelector('.user-name')
 
 if(localStorage.getItem('user')){
   let userLogged = JSON.parse(localStorage.getItem('user'))
   userBar.style = "display:none"
   profile.style = "display:flex"
-  userSettings.innerHTML=`${userLogged.userName}`
+  userSettings.innerHTML=`${userLogged.userName.slice(0, userLogged.userName.indexOf('@'))}`;
+  userName.innerHTML=`${userLogged.userName.slice(0, userLogged.userName.indexOf('@'))}`;
 
 
 }else{
