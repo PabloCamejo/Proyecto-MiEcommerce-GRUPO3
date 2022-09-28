@@ -3,7 +3,6 @@ const sessionId = localStorage.setItem('id', 0);
 const loggedUserId = localStorage.getItem('id');
 
 const url = window.location.href
-console.log(url);
 const addProd = document.querySelector('.button');
 const id = Number(url.split('/').pop());
 
