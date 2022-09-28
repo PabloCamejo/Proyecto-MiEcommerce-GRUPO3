@@ -39,7 +39,7 @@ loginForm.addEventListener('submit', async (e) => {
     }
     //Codigo para accionar al boton reintentar
     wrongSecondaryBt.addEventListener('click', () => {
-        loginForm.style = "display: block";
+        loginForm.style = "display: flex";
         divAlert.classList.remove('show');
     })
     //codigo para detener animacion divAlert
