@@ -12,6 +12,9 @@ app.set('views', './views/pages')
 app.set('view engine', 'ejs');
 
 //ACA SE DIRIGE AL ARCHIVO CON TODAS LAS RUTAS
+app.get('/test', (req,res) =>{
+    res.render('test')
+})
 app.use('/', mainRoute);
 
 app.listen(PORT, () => {

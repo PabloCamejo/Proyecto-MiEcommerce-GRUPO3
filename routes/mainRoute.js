@@ -7,6 +7,7 @@ const checkoutRoute = require('./checkoutRoute');
 const userRoute = require('./userRoute');
 const productRoute = require('./productRoute');
 const page404Route = require('./page404Route');
+// const testRoute = require('./testRoute');
 
 //REDIRIGE LA RUTA CORRESPONDIENTE
 router.use('/', productRoute);
@@ -14,6 +15,9 @@ router.use('/', cartRoute);
 router.use('/', checkoutRoute);
 router.use('/', userRoute);
 router.use('/', page404Route);
+
+// router.use('/', testRoute);
+
 
 module.exports = router;
 
